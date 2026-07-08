@@ -84,6 +84,6 @@ Hero **Get Started** links to the homepage pathways section (`/#pathways`).
 
 | Symptom | Fix |
 |---------|-----|
-| Page body looks empty in the editor | The page may have been saved as one giant **Custom HTML** block. Re-insert **About — full page (Program Overview)** from the inserter (replace existing body content), or run `bin/setup-program-overview-page.php` to rebuild blocks. |
+| “Block contains unexpected or invalid content” after inserting a pattern | Delete the broken block and re-insert from **Patterns → CCG Fusion — About** (theme v0.7.2+ fixes group wrapper markup). Or run `bin/setup-program-overview-page.php` to rebuild the page. |
 | “CCG Fusion — About” missing in Patterns | Hard-refresh the editor, confirm theme **CCG Fusion** v0.7.1+ is active, then try **Patterns → All** and search `About`. |
 | Front end looks fine but editor is blank | Switch a Custom HTML block to **Edit as HTML** — if you see markup, replace the block using the patterns above. |

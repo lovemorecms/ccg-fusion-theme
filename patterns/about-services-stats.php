@@ -8,7 +8,7 @@
  */
 ?>
 <!-- wp:group {"className":"kc-content","layout":{"type":"default"}} -->
-<div class="kc-content">
+<div class="wp-block-group kc-content">
 	<!-- wp:group {"tagName":"section","className":"kc-section","anchor":"services","layout":{"type":"default"}} -->
 	<section id="services" class="wp-block-group kc-section">
 		<!-- wp:heading {"level":2,"className":"kc-section-heading po-section-heading"} -->
@@ -20,7 +20,24 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:html -->
-		<?php require get_template_directory() . '/inc/about/partials/stats-list.php'; ?>
+		<ul class="po-stats">
+			<li class="po-stat">
+				<span class="po-stat__value">99.99%</span>
+				<span class="po-stat__label">Uptime SLA</span>
+			</li>
+			<li class="po-stat">
+				<span class="po-stat__value">24/7</span>
+				<span class="po-stat__label">Support</span>
+			</li>
+			<li class="po-stat">
+				<span class="po-stat__value">100%</span>
+				<span class="po-stat__label">Compliant</span>
+			</li>
+			<li class="po-stat">
+				<span class="po-stat__value">Secure</span>
+				<span class="po-stat__label">Infrastructure</span>
+			</li>
+		</ul>
 		<!-- /wp:html -->
 	</section>
 	<!-- /wp:group -->

@@ -6,9 +6,12 @@
  * Inserter: yes
  * Description: Platform image cards — "We know your work is critical."
  */
+$ccg_po_secure_img = esc_url( ccg_about_program_image_url( 'secure-platforms.jpg' ) );
+$ccg_po_scale_img  = esc_url( ccg_about_program_image_url( 'scalable-platforms.jpg' ) );
+$ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platforms.jpg' ) );
 ?>
 <!-- wp:group {"className":"kc-content","layout":{"type":"default"}} -->
-<div class="kc-content">
+<div class="wp-block-group kc-content">
 	<!-- wp:group {"tagName":"section","className":"kc-section","anchor":"critical-work","layout":{"type":"default"}} -->
 	<section id="critical-work" class="wp-block-group kc-section">
 		<!-- wp:heading {"level":2,"className":"kc-section-heading po-section-heading"} -->
@@ -20,7 +23,35 @@
 		<!-- /wp:paragraph -->
 
 		<!-- wp:html -->
-		<?php require get_template_directory() . '/inc/about/partials/platform-cards.php'; ?>
+		<div class="po-platform-grid">
+			<article class="po-platform-card">
+				<div class="po-platform-card__media">
+					<img src="<?php echo $ccg_po_secure_img; ?>" alt="" loading="lazy" decoding="async" />
+				</div>
+				<div class="po-platform-card__body">
+					<h3 class="po-platform-card__title">Secure platforms</h3>
+					<p class="po-platform-card__desc">Our infrastructure is built with security at its core, meeting the highest standards for government and healthcare.</p>
+				</div>
+			</article>
+			<article class="po-platform-card">
+				<div class="po-platform-card__media">
+					<img src="<?php echo $ccg_po_scale_img; ?>" alt="" loading="lazy" decoding="async" />
+				</div>
+				<div class="po-platform-card__body">
+					<h3 class="po-platform-card__title">Scalable platforms</h3>
+					<p class="po-platform-card__desc">Grow with confidence knowing our systems can handle peak demands and expand as your needs evolve.</p>
+				</div>
+			</article>
+			<article class="po-platform-card">
+				<div class="po-platform-card__media">
+					<img src="<?php echo $ccg_po_stress_img; ?>" alt="" loading="lazy" decoding="async" />
+				</div>
+				<div class="po-platform-card__body">
+					<h3 class="po-platform-card__title">Stress-tested platforms</h3>
+					<p class="po-platform-card__desc">Rigorously tested and proven to deliver reliable performance under the most demanding conditions.</p>
+				</div>
+			</article>
+		</div>
 		<!-- /wp:html -->
 	</section>
 	<!-- /wp:group -->
