@@ -37,7 +37,9 @@ Insert **in this order**:
 | 5 | About — security |
 | 6 | About — building together CTA |
 
-Section headings and ledes in **critical work** and **services & stats** are core blocks — edit them directly in the editor.
+Section headings and ledes in **hero**, **critical work**, **features**, **services & stats**, **security**, and **CTA** are core blocks — edit them directly in the editor.
+
+**Still Custom HTML (by design):** breadcrumb bar, hero buttons, platform image cards, stats row, security checklist icons, feature icons, and CTA button use CMS Design System markup that is easier to keep in HTML blocks.
 
 ## 3. Publish
 

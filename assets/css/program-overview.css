@@ -289,13 +289,15 @@ h3.po-platform-card__title {
   }
 }
 
-.po-feature-grid {
+.po-feature-grid,
+.ccg-program-overview-page .wp-block-group.po-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
 }
 
-.po-feature-card {
+.po-feature-card,
+.ccg-program-overview-page .wp-block-group.po-feature-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
