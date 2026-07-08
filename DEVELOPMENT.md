@@ -56,9 +56,9 @@ Add a `.gitignore` in this folder for things you should not commit, for example:
 
 Do **not** commit the full Local site (`app/public/wp-content/uploads`, database, etc.) — only this theme directory.
 
-## Cursor / AI edits
+## Local editing
 
-Open this folder in Cursor (File → Open Folder) so paths match. Theme changes requested in chat should target this directory.
+Open this theme folder in your editor (File → Open Folder) so paths match LocalWP. Keep changes scoped to this directory, not the full WordPress install.
 
 ## Prototype reference
 

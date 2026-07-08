@@ -142,5 +142,5 @@ CCG-WP-THEME/
 
 
 
-Open this folder in Cursor and continue in project chat. Prototype reference: `Desktop/fusion-sphere/fusion-sphere`.
+Edit this theme folder in your IDE. Prototype reference: `Desktop/fusion-sphere/fusion-sphere`.
 
