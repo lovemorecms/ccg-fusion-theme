@@ -1,0 +1,23 @@
+<!-- wp:template-part {"slug":"usa-banner","tagName":"div","className":"ccg-usa-banner-part"} /-->
+
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"ccg-site-header-part"} /-->
+
+<!-- wp:group {"tagName":"main","anchor":"main-content","className":"ccg-main","layout":{"type":"constrained"}} -->
+<main id="main-content" class="wp-block-group ccg-main">
+	<!-- wp:query {"query":{"perPage":10,"pages":0},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template -->
+			<!-- wp:post-title {"isLink":true} /-->
+			<!-- wp:post-excerpt /-->
+		<!-- /wp:post-template -->
+		<!-- wp:query-no-results -->
+			<!-- wp:paragraph -->
+			<p>No posts yet. Create a Page and set it as your homepage under Settings → Reading.</p>
+			<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->

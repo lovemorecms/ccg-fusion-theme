@@ -1,0 +1,402 @@
+/**
+ * CCG Fusion — layout & prototype styles on top of CMS.gov Design System (cmsgov-theme.css).
+ * Uses CMS tokens: --color-primary*, --global__font-family, etc.
+ */
+
+:root {
+  --fusion-site-max-width: 100rem;
+  --fusion-site-padding-x: 1.25rem;
+  --fusion-site-padding-x-md: 2rem;
+  /* Sticky stack: CCG nav only + Explore breadcrumb (gov banner scrolls away). */
+  --ccg-site-nav-height: var(--fusion-nav-sticky-height, 5rem);
+  --ccg-breadcrumb-bar-height: 2.75rem;
+  --ccg-sticky-stack-top: calc(var(--ccg-site-nav-height) + var(--ccg-breadcrumb-bar-height));
+}
+
+/* Gov banner — scrolls away (separate template part, not inside sticky header) */
+.fusion-usa-banner.ds-c-usa-banner,
+.ccg-usa-banner-part {
+  position: relative;
+  z-index: 1;
+  background: #f0f0f0;
+}
+
+/*
+ * Header template part — not sticky (nav wrapper is sticky, like the React prototype).
+ * Keeps mega menu dropdown in the same stacking layer as the nav bar.
+ */
+header.ccg-site-header-part,
+header.wp-block-template-part.ccg-site-header-part {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+/* Sticky nav shell — mega menu panels are children of this element */
+header.ccg-site-header-part .fusion-site-header,
+.fusion-site-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  overflow: visible;
+  border-bottom: 1px solid color-mix(in srgb, #e6e6e6 80%, transparent);
+  background: color-mix(in srgb, #ffffff 95%, transparent);
+  box-shadow:
+    0 10px 15px color-mix(in srgb, #000000 6%, transparent),
+    0 4px 6px color-mix(in srgb, #000000 5%, transparent);
+  padding: 0;
+}
+
+header.ccg-site-header-part:has(.fusion-nav-v2--mega-open) .fusion-site-header {
+  z-index: 200;
+}
+
+/* Prevent WP layout wrappers from breaking position: sticky */
+.wp-site-blocks,
+.wp-block-template-part,
+.ccg-usa-banner-part {
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fusion-site-padding-x: var(--fusion-site-padding-x-md);
+  }
+}
+
+/* Skip link */
+.ccg-skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary-darkest, #07124a);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ccg-skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__header,
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__guidance {
+  box-sizing: border-box;
+  max-width: var(--fusion-site-max-width);
+  margin-inline: auto;
+  padding-inline: var(--fusion-site-padding-x);
+}
+
+@media (min-width: 768px) {
+  .fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__header,
+  .fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__guidance {
+    padding-inline: var(--fusion-site-padding-x-md);
+  }
+}
+
+/* USA banner — match CMS DS sizing when WP/theme styles leak in */
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__header {
+  font-size: var(--usa-banner-heading__font-size, 0.875rem);
+  line-height: var(--usa-banner-heading__line-height, 1.1);
+}
+
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__guidance {
+  font-size: var(--usa-banner-panel__font-size, 1rem);
+  line-height: var(--usa-banner-panel__line-height, 1.5);
+}
+
+/* Responsive action/button visibility (mirrors CMS DS utilities) */
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__action {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+}
+
+.fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__button-text {
+  display: none;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Shared nav/banner chevron (matches FusionSiteNavV2) */
+.ccg-mega-chevron {
+  flex-shrink: 0;
+  transition: transform 200ms ease;
+}
+
+.fusion-usa-banner.ds-c-usa-banner .ccg-mega-chevron {
+  margin-left: 0.25rem;
+  margin-top: 2px;
+}
+
+.ccg-mega-chevron--open {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__action {
+    display: none !important;
+  }
+
+  .fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__button-text {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.fusion-site-header__inner {
+  max-width: var(--fusion-site-max-width);
+  margin: 0 auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fusion-site-header__title a {
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color-primary-darkest, #07124a);
+  text-decoration: none;
+}
+
+.fusion-site-header__nav-placeholder {
+  margin: 0;
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.fusion-site-header__nav-placeholder a {
+  color: var(--color-primary-darker, #0d2499);
+  text-decoration: none;
+}
+
+.fusion-site-header__nav-placeholder a:hover {
+  color: var(--color-primary-darkest, #07124a);
+  text-decoration: underline;
+}
+
+html.ccg-mega-nav-open {
+  overflow: hidden;
+}
+
+/* Main content */
+.ccg-main {
+  max-width: var(--fusion-site-max-width);
+  margin: 0 auto;
+  padding: 0 var(--fusion-site-padding-x) 3rem;
+}
+
+/* Homepage — full-bleed sections (details in home.css) */
+.ccg-main.ccg-main--home,
+.ccg-main:has(.ccg-home-page),
+.ccg-main:has(.fusion-hero) {
+  max-width: none;
+  padding: 0;
+}
+
+/* Page content stays below open mega menu */
+.ccg-main,
+.ccg-main .ccg-hero,
+.ccg-main .init-hero,
+.ccg-main .alignfull {
+  position: relative;
+  z-index: 0;
+}
+
+.ccg-main .wp-block-post-title {
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--color-primary-darkest, #07124a);
+  margin: 2rem 0 1rem;
+  line-height: 1.1;
+}
+
+/* Marketing hero pattern (Fusion Toolkit / Explore style) */
+.ccg-hero {
+  position: relative;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+  padding: clamp(3rem, 8vw, 6rem) var(--fusion-site-padding-x) clamp(2.5rem, 6vw, 4rem);
+  background: linear-gradient(
+    156deg,
+    color-mix(in srgb, var(--color-primary-lightest, #e8f1fb) 88%, #ffffff) 0%,
+    #ffffff 52%,
+    color-mix(in srgb, var(--color-primary-light, #4f95c7) 22%, transparent) 100%
+  );
+}
+
+.ccg-hero__title {
+  max-width: 16ch;
+  margin: 0 auto 0 0;
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-primary-darkest, #07124a);
+}
+
+.ccg-hero__lede {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+  font-size: clamp(1.125rem, 1.5vw, 1.875rem);
+  line-height: 1.45;
+  color: var(--color-gray-dark, #5a5a5a);
+}
+
+.ccg-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ccg-btn-secondary.ds-c-button--ghost {
+  background: color-mix(in srgb, var(--color-gray-lighter, #e6e6e6) 65%, #ffffff) !important;
+  border-color: color-mix(in srgb, var(--color-gray-light, #a6a6a6) 80%, transparent) !important;
+  color: var(--color-gray-darkest, #1a1a1a) !important;
+}
+
+.ccg-two-col {
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.ccg-two-col__media img {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-gray-lighter, #e6e6e6);
+}
+
+/* CTA band */
+.ccg-cta-band {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  max-width: 100vw;
+  padding: 3rem var(--fusion-site-padding-x);
+  background: linear-gradient(
+    180deg,
+    var(--color-primary-darkest, #07124a) 0%,
+    var(--color-primary-darker, #0d2499) 100%
+  );
+  color: #ffffff;
+  text-align: center;
+}
+
+.ccg-cta-band h2,
+.ccg-cta-band p {
+  color: #ffffff;
+}
+
+.ccg-cta-band__actions {
+  margin-top: 1.5rem;
+}
+
+.ccg-cta-band__btn.ds-c-button--solid {
+  background: #ffffff !important;
+  color: var(--color-primary-darkest, #07124a) !important;
+  border-color: #ffffff !important;
+}
+
+/* Footer — prototype CMS three-column */
+.fusion-site-footer {
+  background-color: #f0f0f0;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--fusion-site-padding-x) clamp(2rem, 4vw, 3rem);
+  margin-top: 2rem;
+}
+
+.fusion-site-footer__inner {
+  box-sizing: border-box;
+  max-width: var(--fusion-site-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.25rem;
+}
+
+@media (min-width: 900px) {
+  .fusion-site-footer__inner {
+    grid-template-columns: minmax(12rem, 1.25fr) 1fr 1fr;
+    gap: 2rem 3rem;
+    align-items: start;
+  }
+}
+
+.fusion-site-footer__brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.fusion-site-footer__brand-logo--hhs {
+  width: auto;
+  height: clamp(3rem, 8vw, 3.75rem);
+}
+
+.fusion-site-footer__brand-logo--cms {
+  width: auto;
+  max-width: min(14rem, 46vw);
+  height: clamp(2.75rem, 7vw, 3.25rem);
+}
+
+.fusion-site-footer__brand-body {
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #404040;
+  margin: 0;
+  max-width: 24rem;
+}
+
+.fusion-site-footer__brand-address {
+  display: inline-block;
+  margin-top: 0.35rem;
+}
+
+.fusion-site-footer__heading {
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 0 0 0.625rem;
+}
+
+.fusion-site-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fusion-site-footer__link,
+.fusion-site-footer__link:visited {
+  font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+  font-size: 1rem;
+  color: var(--color-primary, #005ea2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.fusion-site-footer__link:hover {
+  color: var(--color-primary-darker, #004479);
+}
+
+/* Full-width groups inside constrained main */
+.ccg-main > .alignfull {
+  max-width: none;
+}

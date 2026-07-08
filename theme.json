@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "64rem",
+      "wideSize": "100rem"
+    },
+    "color": {
+      "palette": [
+        { "slug": "primary-darkest", "color": "#07124a", "name": "Primary darkest" },
+        { "slug": "primary-darker", "color": "#0d2499", "name": "Primary darker" },
+        { "slug": "primary", "color": "#005ea2", "name": "Primary" },
+        { "slug": "white", "color": "#ffffff", "name": "White" }
+      ]
+    }
+  },
+  "templateParts": [
+    { "name": "usa-banner", "title": "USA Banner", "area": "header" },
+    { "name": "header", "title": "Site header (nav)", "area": "header" },
+    { "name": "footer", "title": "Footer", "area": "footer" }
+  ],
+  "customTemplates": [
+    { "name": "page-explore", "title": "Explore page", "postTypes": ["page"] },
+    { "name": "page-program-overview", "title": "Program Overview page", "postTypes": ["page"] }
+  ]
+}

@@ -1,0 +1,14 @@
+/*
+Theme Name: CCG Fusion
+Theme URI: https://github.com/lovemorelecor/ccg-fusion
+Description: Block theme for the FUSION Sphere prototype. Marketing pages and patterns first; Knowledge Center later.
+Author: LeCor Technology Services
+Version: 0.7.1
+Requires at least: 6.3
+Tested up to: 6.7
+Requires PHP: 7.4
+Text Domain: ccg-wp-theme
+Tags: block-theme, full-site-editing, accessibility-ready
+*/
+
+/* Block styles live in assets/css/theme.css (loaded via functions.php). */

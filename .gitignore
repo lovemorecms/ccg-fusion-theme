@@ -1,0 +1,12 @@
+# Dependencies (optional vendored CMS DS)
+node_modules/
+assets/vendor/cmsds/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Local overrides (do not commit secrets)
+.env
+.env.*

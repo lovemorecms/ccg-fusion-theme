@@ -1,0 +1,12 @@
+{
+  "name": "ccg-wp-theme",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Vendor CMS.gov Design System CSS into the theme (optional; CDN is used if vendor files are missing).",
+  "scripts": {
+    "vendor:cmsds": "node scripts/vendor-cmsds.mjs"
+  },
+  "devDependencies": {
+    "@cmsgov/ds-cms-gov": "12.4.5"
+  }
+}
