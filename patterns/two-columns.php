@@ -2,7 +2,7 @@
 /**
  * Title: Two columns — text and image
  * Slug: ccg-wp-theme/two-columns
- * Categories: ccg-fusion
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:columns {"align":"wide","className":"ccg-two-col"} -->

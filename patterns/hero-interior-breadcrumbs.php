@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — hero band
- * Slug: ccg-wp-theme/about-hero-band
- * Categories: ccg-hero
- * Inserter: no
- * Description: Deprecated — use "Interior hero with breadcrumbs" in Hero.
+ * Title: Interior hero with breadcrumbs
+ * Slug: ccg-wp-theme/hero-interior-breadcrumbs
+ * Categories: ccg-hero, ccg-breadcrumbs
+ * Inserter: yes
+ * Description: Dark gradient hero with breadcrumb bar, heading, lede, and two CMS buttons.
  */
 $ccg_po_home_url    = esc_url( home_url( '/' ) );
 $ccg_po_about_url   = esc_url( ccg_nav_url( '/about/program-overview' ) );

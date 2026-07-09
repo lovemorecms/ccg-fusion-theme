@@ -2,7 +2,7 @@
 
 
 
-**Version 0.7.1** uses the **official CMS.gov Design System** (same library as the FUSION Sphere prototype). See **HOME-PAGE.md**, **EXPLORE-PAGE.md**, and **ABOUT-PROGRAM-OVERVIEW-PAGE.md** for building pages with patterns.
+**Version 0.8.0** uses the **official CMS.gov Design System** (same library as the FUSION Sphere prototype). See **HOME-PAGE.md**, **EXPLORE-PAGE.md**, **ABOUT-PROGRAM-OVERVIEW-PAGE.md**, and **PATTERN-LIBRARY.md** for building pages with patterns.
 
 
 
@@ -24,7 +24,7 @@ A **WordPress block theme** (the design shell for the site). It is built from th
 
 
 
-## What’s included (v0.7)
+## What’s included (v0.8)
 
 
 
@@ -48,14 +48,11 @@ A **WordPress block theme** (the design shell for the site). It is built from th
 
 ### Pages & patterns
 
+Patterns are grouped by **purpose** in the inserter (Hero, CTA, Cards, etc.) — see **PATTERN-LIBRARY.md**.
 
-
-- **Home** — full page pattern + section patterns (`patterns/home-*.php`)
-
-- **Explore** — patterns + `page-explore.html` template
-
-- **About / Program Overview** — patterns + `page-program-overview.html` template
-
+- **Home** — page layout + section patterns (`patterns/home-*.php`)
+- **Explore** — section patterns + `page-explore.html` template
+- **About / Program Overview** — section patterns + `page-program-overview.html` template
 - **Marketing** — hero, two-column, CTA band patterns
 
 

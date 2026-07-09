@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — hero carousel
+ * Title: Home hero carousel
  * Slug: ccg-wp-theme/home-hero
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-hero
  * Description: Full-width CMS primary hero with carousel and CTAs.
  */
 ?>

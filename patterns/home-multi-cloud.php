@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — Multi-Cloud Services
+ * Title: Multi-cloud services
  * Slug: ccg-wp-theme/home-multi-cloud
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

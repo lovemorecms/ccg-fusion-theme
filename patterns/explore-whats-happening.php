@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — What's happening
+ * Title: What's happening feed
  * Slug: ccg-wp-theme/explore-whats-happening
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

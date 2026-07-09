@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — platforms grid
+ * Title: Numbered platform cards
  * Slug: ccg-wp-theme/explore-platforms
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-cards
  * Inserter: yes
  */
 ?>

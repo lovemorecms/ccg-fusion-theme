@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — services & stats
- * Slug: ccg-wp-theme/about-services-stats
- * Categories: ccg-stats
- * Inserter: no
- * Description: Deprecated — use "Four metrics" in Stats & metrics.
+ * Title: Four metrics
+ * Slug: ccg-wp-theme/stats-metrics-four-up
+ * Categories: ccg-stats, ccg-content
+ * Inserter: yes
+ * Description: Services heading with uptime, support, compliance, and infrastructure stats.
  */
 ?>
 <!-- wp:group {"className":"kc-content ccg-about-sections","layout":{"type":"default"}} -->

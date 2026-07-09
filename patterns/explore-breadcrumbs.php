@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — breadcrumbs
+ * Title: Interior breadcrumbs
  * Slug: ccg-wp-theme/explore-breadcrumbs
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-breadcrumbs
  * Description: Dark breadcrumb strip: Home → Explore.
  */
 ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — full page (Program Overview)
- * Slug: ccg-wp-theme/about-program-overview-page
+ * Title: Program Overview page layout
+ * Slug: ccg-wp-theme/page-layout-program-overview
  * Categories: ccg-page-layouts
- * Inserter: no
- * Description: Deprecated — use "Program Overview page layout" in Page layouts.
+ * Inserter: yes
+ * Description: Inserts all Program Overview sections in order — use once per page.
  */
 ?>
 <!-- wp:group {"align":"full","className":"ccg-about-sections program-overview","layout":{"type":"default"}} -->

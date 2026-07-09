@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — hero
+ * Title: Dark hero with image
  * Slug: ccg-wp-theme/explore-hero
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-hero
  * Description: Dark CMS primary hero with background image and accent CTAs.
  */
 $ccg_hero_img = esc_url( get_template_directory_uri() . '/assets/images/sections/initiatives-hero-cms-gov.png' );

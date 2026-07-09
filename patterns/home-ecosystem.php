@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — FUSION ecosystem
+ * Title: FUSION ecosystem
  * Slug: ccg-wp-theme/home-ecosystem
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

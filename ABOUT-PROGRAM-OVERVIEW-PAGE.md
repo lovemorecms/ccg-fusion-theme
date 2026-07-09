@@ -13,45 +13,44 @@ Patterns live in the **block editor inserter**, not in **Appearance → Editor �
 
 1. Open the page in the block editor.
 2. Click **+** (block inserter).
-3. Go to **Patterns** → **CCG Fusion — About** (or search “About”).
-4. Insert the full page or section patterns below.
+3. Go to **Patterns** and pick a purpose category (see **PATTERN-LIBRARY.md**), or search by pattern name.
 
 ### Option A — Full page (fastest)
 
-Open **Patterns → CCG Fusion — About** and insert:
+Open **Patterns → Page layouts** and insert:
 
 | Pattern |
 |---------|
-| **About — full page (Program Overview)** |
+| **Program Overview page layout** |
 
 ### Option B — Section by section
 
 Insert **in this order**:
 
-| Order | Pattern name |
-|------|----------------|
-| 1 | About — hero band |
-| 2 | About — critical work |
-| 3 | About — feature capabilities |
-| 4 | About — services & stats |
-| 5 | About — security |
-| 6 | About — building together CTA |
+| Order | Category | Pattern name |
+|------|----------|----------------|
+| 1 | Hero | Interior hero with breadcrumbs |
+| 2 | Cards | Three image cards |
+| 3 | Feature grid | Four icon features |
+| 4 | Stats & metrics | Four metrics |
+| 5 | Checklist & lists | Checkmark list (two columns) |
+| 6 | CTA | Gradient CTA band |
 
-Section headings and ledes in **hero**, **critical work**, **features**, **services & stats**, **security**, and **CTA** are core blocks — edit them directly in the editor.
+Section headings and ledes in **hero**, **cards**, **features**, **stats**, **checklist**, and **CTA** are core blocks — edit them directly in the editor.
 
 **Still Custom HTML (by design):** breadcrumb bar, hero buttons, security checklist (icons + list), feature icons, and CTA button — these use CMS Design System markup that is easier to keep in small HTML blocks.
 
 **Editable as blocks:** section headings/ledes, platform card images/titles/descriptions, stat values/labels, and feature card titles/descriptions.
 
-## Using About patterns on other pages
+## Using Program Overview patterns on other pages
 
 You do **not** need the **Program Overview page** template on every page. Use the default page template.
 
 1. **Pages → Add New** (any title/slug).
-2. Insert **About — full page (Program Overview)** once, **or** insert section patterns from **CCG Fusion — About** in order.
+2. Insert **Program Overview page layout** once, **or** insert section patterns from the categories above in order.
 3. Each pattern includes the `ccg-about-sections` scope class so **full-width hero/CTA bands** and section styles apply automatically.
 
-Optional: insert **About — sections wrapper** first if you are building the page piece by piece and want one container group to nest sections inside.
+Optional: insert **Sections scope wrapper** (Utilities) first if you are building the page piece by piece.
 
 After updating the theme, **re-insert** patterns on pages that were built with an older version (boxed layout / HTML-only cards).
 
@@ -100,6 +99,6 @@ Hero **Get Started** links to the homepage pathways section (`/#pathways`).
 
 | Symptom | Fix |
 |---------|-----|
-| “Block contains unexpected or invalid content” after inserting a pattern | Delete the broken block and re-insert from **Patterns → CCG Fusion — About** (theme v0.7.2+ fixes group wrapper markup). Or run `bin/setup-program-overview-page.php` to rebuild the page. |
-| “CCG Fusion — About” missing in Patterns | Hard-refresh the editor, confirm theme **CCG Fusion** v0.7.1+ is active, then try **Patterns → All** and search `About`. |
+| “Block contains unexpected or invalid content” after inserting a pattern | Delete the broken block and re-insert from **Patterns** (theme v0.7.2+ fixes group wrapper markup). Or run `bin/setup-program-overview-page.php` to rebuild the page. |
+| Purpose categories missing in Patterns | Hard-refresh the editor, confirm theme **CCG Fusion** v0.8.0+ is active, then try **Patterns → All** and search by section name. |
 | Front end looks fine but editor is blank | Switch a Custom HTML block to **Edit as HTML** — if you see markup, replace the block using the patterns above. |

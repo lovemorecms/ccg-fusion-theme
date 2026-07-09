@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — pathways
+ * Title: Pathways section
  * Slug: ccg-wp-theme/home-pathways
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

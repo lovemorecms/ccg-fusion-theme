@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — Quick Access
+ * Title: Quick access tiles
  * Slug: ccg-wp-theme/home-quick-access
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

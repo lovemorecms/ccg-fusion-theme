@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — feature capabilities
- * Slug: ccg-wp-theme/about-features
+ * Title: Four icon features
+ * Slug: ccg-wp-theme/feature-grid-icons-four
  * Categories: ccg-feature-grid
- * Inserter: no
- * Description: Deprecated — use "Four icon features" in Feature grid.
+ * Inserter: yes
+ * Description: Four icon feature cards on a light gray band.
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"po-band ccg-about-features ccg-about-sections","layout":{"type":"default"}} -->

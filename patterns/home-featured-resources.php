@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — Featured Resources
+ * Title: Featured resources
  * Slug: ccg-wp-theme/home-featured-resources
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

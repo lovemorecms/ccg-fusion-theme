@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CCG_WP_THEME_VERSION', '0.7.6' );
+define( 'CCG_WP_THEME_VERSION', '0.8.0' );
 define( 'CCG_CMSDS_VERSION', '12.4.5' );
 
 /**
@@ -29,8 +29,10 @@ function ccg_wp_theme_setup() {
 			'assets/css/program-overview.css',
 		)
 	);
+	remove_theme_support( 'core-block-patterns' );
 }
 add_action( 'after_setup_theme', 'ccg_wp_theme_setup' );
+add_filter( 'should_load_remote_block_patterns', '__return_false' );
 
 /**
  * URL for vendored CMS DS CSS, else jsDelivr (same package as the React prototype).
@@ -107,32 +109,31 @@ add_action( 'enqueue_block_editor_assets', 'ccg_wp_theme_enqueue_assets' );
 add_action( 'enqueue_block_assets', 'ccg_wp_theme_enqueue_assets' );
 
 /**
- * Pattern category (CCG Fusion sections for editors).
+ * Purpose-based pattern categories for the block inserter.
  */
 function ccg_wp_theme_register_pattern_category() {
-	if ( function_exists( 'register_block_pattern_category' ) ) {
+	if ( ! function_exists( 'register_block_pattern_category' ) ) {
+		return;
+	}
+
+	$categories = array(
+		'ccg-hero'          => __( 'Hero', 'ccg-wp-theme' ),
+		'ccg-cta'           => __( 'CTA', 'ccg-wp-theme' ),
+		'ccg-cards'         => __( 'Cards', 'ccg-wp-theme' ),
+		'ccg-feature-grid'  => __( 'Feature grid', 'ccg-wp-theme' ),
+		'ccg-stats'         => __( 'Stats & metrics', 'ccg-wp-theme' ),
+		'ccg-content'       => __( 'Content sections', 'ccg-wp-theme' ),
+		'ccg-checklist'     => __( 'Checklist & lists', 'ccg-wp-theme' ),
+		'ccg-breadcrumbs'   => __( 'Breadcrumbs', 'ccg-wp-theme' ),
+		'ccg-page-layouts'  => __( 'Page layouts', 'ccg-wp-theme' ),
+		'ccg-utilities'     => __( 'Utilities', 'ccg-wp-theme' ),
+	);
+
+	foreach ( $categories as $slug => $label ) {
 		register_block_pattern_category(
-			'ccg-fusion',
+			$slug,
 			array(
-				'label' => __( 'CCG Fusion', 'ccg-wp-theme' ),
-			)
-		);
-		register_block_pattern_category(
-			'ccg-fusion-explore',
-			array(
-				'label' => __( 'CCG Fusion — Explore', 'ccg-wp-theme' ),
-			)
-		);
-		register_block_pattern_category(
-			'ccg-fusion-home',
-			array(
-				'label' => __( 'CCG Fusion — Home', 'ccg-wp-theme' ),
-			)
-		);
-		register_block_pattern_category(
-			'ccg-fusion-about',
-			array(
-				'label' => __( 'CCG Fusion — About', 'ccg-wp-theme' ),
+				'label' => $label,
 			)
 		);
 	}

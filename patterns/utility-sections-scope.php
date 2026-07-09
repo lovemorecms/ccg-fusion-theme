@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — sections wrapper
- * Slug: ccg-wp-theme/about-sections-wrapper
+ * Title: Sections scope wrapper
+ * Slug: ccg-wp-theme/utility-sections-scope
  * Categories: ccg-utilities
- * Inserter: no
- * Description: Deprecated — use "Sections scope wrapper" in Utilities.
+ * Inserter: yes
+ * Description: Optional wrapper so full-width bands and section padding work on any page.
  */
 ?>
 <!-- wp:group {"align":"full","className":"ccg-about-sections program-overview","layout":{"type":"default"}} -->

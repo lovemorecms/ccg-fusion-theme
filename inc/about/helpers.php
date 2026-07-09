@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Render markup from a theme pattern file (block comments preserved).
  *
- * @param string $pattern_file Basename under patterns/, e.g. about-hero-band.php.
+ * @param string $pattern_file Basename under patterns/, e.g. hero-interior-breadcrumbs.php.
  */
 function ccg_about_render_pattern_file( $pattern_file ) {
 	$path = get_template_directory() . '/patterns/' . ltrim( $pattern_file, '/' );
@@ -29,12 +29,12 @@ function ccg_about_render_pattern_file( $pattern_file ) {
  */
 function ccg_about_program_overview_page_content() {
 	$sections = array(
-		'about-hero-band.php',
-		'about-critical-work.php',
-		'about-features.php',
-		'about-services-stats.php',
-		'about-security.php',
-		'about-cta.php',
+		'hero-interior-breadcrumbs.php',
+		'cards-image-three-up.php',
+		'feature-grid-icons-four.php',
+		'stats-metrics-four-up.php',
+		'checklist-icon-two-column.php',
+		'cta-gradient-band.php',
 	);
 	$parts    = array();
 	foreach ( $sections as $file ) {

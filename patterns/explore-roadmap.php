@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — platform roadmap
+ * Title: Platform roadmap timeline
  * Slug: ccg-wp-theme/explore-roadmap
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

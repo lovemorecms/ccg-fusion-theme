@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — full page (all sections)
+ * Title: Home page layout
  * Slug: ccg-wp-theme/home-page
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-page-layouts
  * Description: Complete FUSION Sphere homepage — insert once on the front page.
  */
 ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — critical work
- * Slug: ccg-wp-theme/about-critical-work
- * Categories: ccg-cards
- * Inserter: no
- * Description: Deprecated — use "Three image cards" in Cards.
+ * Title: Three image cards
+ * Slug: ccg-wp-theme/cards-image-three-up
+ * Categories: ccg-cards, ccg-content
+ * Inserter: yes
+ * Description: Three platform image cards with heading and lede — "We know your work is critical."
  */
 $ccg_po_secure_img = esc_url( ccg_about_program_image_url( 'secure-platforms.jpg' ) );
 $ccg_po_scale_img  = esc_url( ccg_about_program_image_url( 'scalable-platforms.jpg' ) );

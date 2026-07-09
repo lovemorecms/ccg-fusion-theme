@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — security
- * Slug: ccg-wp-theme/about-security
+ * Title: Checkmark list (two columns)
+ * Slug: ccg-wp-theme/checklist-icon-two-column
  * Categories: ccg-checklist
- * Inserter: no
- * Description: Deprecated — use "Checkmark list (two columns)" in Checklist & lists.
+ * Inserter: yes
+ * Description: Security standards section with checklist grid.
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"po-band ccg-about-security ccg-about-sections","layout":{"type":"default"}} -->

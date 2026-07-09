@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: [Deprecated] About — building together CTA
- * Slug: ccg-wp-theme/about-cta
+ * Title: Gradient CTA band
+ * Slug: ccg-wp-theme/cta-gradient-band
  * Categories: ccg-cta
- * Inserter: no
- * Description: Deprecated — use "Gradient CTA band" in CTA.
+ * Inserter: yes
+ * Description: Primary gradient CTA band — "Building together".
  */
 ?>
 <!-- wp:group {"tagName":"section","align":"full","className":"po-cta ccg-about-cta ccg-about-sections","layout":{"type":"default"}} -->

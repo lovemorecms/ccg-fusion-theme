@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — Fusion Academy
+ * Title: Fusion Academy
  * Slug: ccg-wp-theme/home-academy
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

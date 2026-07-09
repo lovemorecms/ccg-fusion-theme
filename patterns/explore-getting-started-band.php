@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — Getting started band
+ * Title: Getting started CTA (three cards)
  * Slug: ccg-wp-theme/explore-getting-started-band
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-cta
  */
 ?>
 <!-- wp:html -->

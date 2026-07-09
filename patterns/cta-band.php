@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: CTA band (primary gradient)
+ * Title: Gradient CTA (centered)
  * Slug: ccg-wp-theme/cta-band
- * Categories: ccg-fusion
+ * Categories: ccg-cta
  */
 ?>
 <!-- wp:group {"align":"full","className":"ccg-cta-band","layout":{"type":"constrained"}} -->

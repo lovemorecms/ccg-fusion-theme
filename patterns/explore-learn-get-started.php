@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Explore — Learn & Get Started
+ * Title: Learn and get started steps
  * Slug: ccg-wp-theme/explore-learn-get-started
- * Categories: ccg-fusion, ccg-fusion-explore
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

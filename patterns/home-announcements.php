@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Home — Latest Announcements
+ * Title: Latest announcements
  * Slug: ccg-wp-theme/home-announcements
- * Categories: ccg-fusion, ccg-fusion-home
+ * Categories: ccg-content
  */
 ?>
 <!-- wp:html -->

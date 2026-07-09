@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Marketing hero (prototype)
+ * Title: Light marketing hero
  * Slug: ccg-wp-theme/hero-marketing
- * Categories: ccg-fusion
+ * Categories: ccg-hero
  * Description: Light glossy hero with CMS Design System buttons — matches FUSION Sphere prototype.
  */
 ?>
