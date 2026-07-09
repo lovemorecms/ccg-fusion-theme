@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CCG_WP_THEME_VERSION', '0.7.5' );
+define( 'CCG_WP_THEME_VERSION', '0.7.6' );
 define( 'CCG_CMSDS_VERSION', '12.4.5' );
 
 /**

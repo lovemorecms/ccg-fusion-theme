@@ -24,10 +24,9 @@
   margin-block: 0;
 }
 
-/* Break out of constrained post content (match Explore getting-started band) */
+/* Break out of constrained post content (wrapper / editor canvas only) */
 .ccg-main:has(.ccg-about-sections) .wp-block-post-content,
 .ccg-main:has(.ccg-about-sections) .wp-block-post-content.is-layout-constrained,
-.ccg-about-sections,
 .ccg-about-sections.program-overview,
 .ccg-about-sections .wp-block-group.program-overview {
   max-width: none;
@@ -35,6 +34,16 @@
   padding-right: 0;
 }
 
+/* Full-bleed bands — same element or nested inside wrapper */
+.ccg-about-sections.tpl-2col-hero-band,
+.ccg-about-sections.wp-block-group.tpl-2col-hero-band,
+.wp-block-group.tpl-2col-hero-band.ccg-about-sections,
+.ccg-about-sections.po-band,
+.ccg-about-sections.wp-block-group.po-band,
+.wp-block-group.po-band.ccg-about-sections,
+.ccg-about-sections.po-cta,
+.ccg-about-sections.wp-block-group.po-cta,
+.wp-block-group.po-cta.ccg-about-sections,
 .ccg-about-sections .tpl-2col-hero-band,
 .ccg-about-sections .wp-block-group.tpl-2col-hero-band,
 .ccg-about-sections .po-band,
@@ -215,16 +224,22 @@
   background: transparent !important;
 }
 
-/* Content sections */
+/* Content sections — white bands (same node or nested) */
+.kc-content.ccg-about-sections,
+.wp-block-group.kc-content.ccg-about-sections,
 .ccg-about-sections .kc-content,
 .ccg-about-sections .wp-block-group.kc-content {
   max-width: var(--fusion-site-max-width, 100rem);
   margin-left: auto;
   margin-right: auto;
   padding: 0 var(--fusion-site-padding-x, 1.25rem);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
+  .kc-content.ccg-about-sections,
+  .wp-block-group.kc-content.ccg-about-sections,
   .ccg-about-sections .kc-content,
   .ccg-about-sections .wp-block-group.kc-content {
     padding-inline: var(--fusion-site-padding-x-md, 2rem);
