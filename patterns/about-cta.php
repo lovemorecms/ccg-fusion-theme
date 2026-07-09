@@ -7,8 +7,8 @@
  * Description: Primary gradient CTA band — "Building together".
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"po-cta ccg-about-cta","layout":{"type":"default"}} -->
-<section class="wp-block-group alignfull po-cta ccg-about-cta">
+<!-- wp:group {"tagName":"section","align":"full","className":"po-cta ccg-about-cta ccg-about-sections","layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull po-cta ccg-about-cta ccg-about-sections">
 	<!-- wp:group {"className":"po-cta__inner","layout":{"type":"default"}} -->
 	<div class="wp-block-group po-cta__inner">
 		<!-- wp:heading {"level":2,"className":"po-cta__heading"} -->

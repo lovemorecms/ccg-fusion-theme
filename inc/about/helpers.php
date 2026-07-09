@@ -44,8 +44,8 @@ function ccg_about_program_overview_page_content() {
 		}
 	}
 	$inner = implode( "\n\n", $parts );
-	return '<!-- wp:group {"className":"program-overview","layout":{"type":"default"}} -->' . "\n"
-		. '<div class="wp-block-group program-overview">' . "\n"
+	return '<!-- wp:group {"align":"full","className":"ccg-about-sections program-overview","layout":{"type":"default"}} -->' . "\n"
+		. '<div class="wp-block-group alignfull ccg-about-sections program-overview">' . "\n"
 		. $inner . "\n"
 		. '</div>' . "\n"
 		. '<!-- /wp:group -->';

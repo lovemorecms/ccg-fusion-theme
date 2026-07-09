@@ -7,8 +7,8 @@
  * Description: Four icon feature cards on a light gray band.
  */
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"po-band ccg-about-features","layout":{"type":"default"}} -->
-<section class="wp-block-group alignfull po-band ccg-about-features">
+<!-- wp:group {"tagName":"section","align":"full","className":"po-band ccg-about-features ccg-about-sections","layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull po-band ccg-about-features ccg-about-sections">
 	<!-- wp:group {"className":"po-band__inner","layout":{"type":"default"}} -->
 	<div class="wp-block-group po-band__inner">
 		<!-- wp:heading {"level":2,"className":"sr-only"} -->

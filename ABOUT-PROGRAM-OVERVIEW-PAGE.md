@@ -43,6 +43,18 @@ Section headings and ledes in **hero**, **critical work**, **features**, **servi
 
 **Editable as blocks:** section headings/ledes, platform card images/titles/descriptions, stat values/labels, and feature card titles/descriptions.
 
+## Using About patterns on other pages
+
+You do **not** need the **Program Overview page** template on every page. Use the default page template.
+
+1. **Pages → Add New** (any title/slug).
+2. Insert **About — full page (Program Overview)** once, **or** insert section patterns from **CCG Fusion — About** in order.
+3. Each pattern includes the `ccg-about-sections` scope class so **full-width hero/CTA bands** and section styles apply automatically.
+
+Optional: insert **About — sections wrapper** first if you are building the page piece by piece and want one container group to nest sections inside.
+
+After updating the theme, **re-insert** patterns on pages that were built with an older version (boxed layout / HTML-only cards).
+
 ## 3. Publish
 
 **Update** the page and view it at `/about/program-overview/`.

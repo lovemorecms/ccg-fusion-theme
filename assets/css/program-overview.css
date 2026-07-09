@@ -1,9 +1,12 @@
 /**
- * Program Overview page — matches FUSION Sphere ProgramOverviewPage prototype.
+ * About / Program Overview sections — prototype layout.
+ * Scoped to `.ccg-about-sections` so patterns work on any page, not only the Program Overview template.
  */
 
-/* Main page wrapper */
-.ccg-program-overview-page.ccg-main {
+/* Main + post content: full bleed when About sections are present */
+.ccg-about-sections.ccg-main,
+.ccg-main.ccg-about-sections,
+.ccg-main:has(.ccg-about-sections) {
   max-width: none;
   padding: 0;
 }
@@ -12,30 +15,32 @@
   display: none;
 }
 
-.ccg-program-overview-page > .alignfull,
-.ccg-program-overview-page .wp-block-group {
+.ccg-about-sections > .alignfull,
+.ccg-about-sections .wp-block-group {
   max-width: none;
 }
 
-.ccg-program-overview-page .wp-block-html {
+.ccg-about-sections .wp-block-html {
   margin-block: 0;
 }
 
 /* Break out of constrained post content (match Explore getting-started band) */
-.ccg-program-overview-page .wp-block-post-content,
-.ccg-program-overview-page .wp-block-post-content.is-layout-constrained,
-.ccg-program-overview-page .wp-block-group.program-overview {
+.ccg-main:has(.ccg-about-sections) .wp-block-post-content,
+.ccg-main:has(.ccg-about-sections) .wp-block-post-content.is-layout-constrained,
+.ccg-about-sections,
+.ccg-about-sections.program-overview,
+.ccg-about-sections .wp-block-group.program-overview {
   max-width: none;
   padding-left: 0;
   padding-right: 0;
 }
 
-.ccg-program-overview-page .tpl-2col-hero-band,
-.ccg-program-overview-page .wp-block-group.tpl-2col-hero-band,
-.ccg-program-overview-page .po-band,
-.ccg-program-overview-page .wp-block-group.po-band,
-.ccg-program-overview-page .po-cta,
-.ccg-program-overview-page .wp-block-group.po-cta {
+.ccg-about-sections .tpl-2col-hero-band,
+.ccg-about-sections .wp-block-group.tpl-2col-hero-band,
+.ccg-about-sections .po-band,
+.ccg-about-sections .wp-block-group.po-band,
+.ccg-about-sections .po-cta,
+.ccg-about-sections .wp-block-group.po-cta {
   position: relative;
   overflow: hidden;
   margin-left: calc(50% - 50vw);
@@ -45,24 +50,24 @@
   box-sizing: border-box;
 }
 
-.ccg-program-overview-page .alignfull {
+.ccg-about-sections .alignfull {
   max-width: none;
 }
 
 /* Breadcrumbs (inside hero band) */
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-inner {
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-inner {
   max-width: var(--fusion-site-max-width, 100rem);
   margin: 0 auto;
   padding: 0.5rem var(--fusion-site-padding-x, 1.25rem);
 }
 
 @media (min-width: 768px) {
-  .ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-inner {
+  .ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-inner {
     padding-inline: var(--fusion-site-padding-x-md, 2rem);
   }
 }
 
-.ccg-program-overview-page .kc-breadcrumb-list {
+.ccg-about-sections .kc-breadcrumb-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -75,23 +80,23 @@
   line-height: 1.4;
 }
 
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-link,
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-link:visited {
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-link,
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-link:visited {
   color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
 }
 
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-link:hover {
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-link:hover {
   color: #ffffff;
 }
 
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-sep {
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-sep {
   color: rgba(255, 255, 255, 0.45);
   display: inline-flex;
   align-items: center;
 }
 
-.ccg-program-overview-page .tpl-2col-breadcrumb-bar .kc-breadcrumb-current {
+.ccg-about-sections .tpl-2col-breadcrumb-bar .kc-breadcrumb-current {
   color: #ffffff;
   font-weight: 700;
 }
@@ -141,7 +146,7 @@
   pointer-events: none;
 }
 
-.ccg-program-overview-page .init-hero__inner.po-hero__inner {
+.ccg-about-sections .init-hero__inner.po-hero__inner {
   position: relative;
   z-index: 2;
   display: grid;
@@ -155,18 +160,18 @@
 }
 
 @media (min-width: 768px) {
-  .ccg-program-overview-page .init-hero__inner.po-hero__inner {
+  .ccg-about-sections .init-hero__inner.po-hero__inner {
     padding-inline: var(--fusion-site-padding-x-md, 2rem);
   }
 }
 
-.ccg-program-overview-page .init-hero__text.po-hero__text {
+.ccg-about-sections .init-hero__text.po-hero__text {
   grid-column: 1 / -1;
   max-width: 56rem;
 }
 
-.ccg-program-overview-page h1.po-hero__heading,
-.ccg-program-overview-page h1.init-hero__heading.po-hero__heading {
+.ccg-about-sections h1.po-hero__heading,
+.ccg-about-sections h1.init-hero__heading.po-hero__heading {
   margin: 0;
   font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
   font-size: clamp(2.25rem, 4vw + 0.5rem, 4.5rem);
@@ -176,8 +181,8 @@
   color: #ffffff;
 }
 
-.ccg-program-overview-page .po-hero__description,
-.ccg-program-overview-page .init-hero__description.po-hero__description {
+.ccg-about-sections .po-hero__description,
+.ccg-about-sections .init-hero__description.po-hero__description {
   margin: 1rem 0 0;
   font-size: clamp(1.125rem, 1.2vw + 0.75rem, 1.5rem);
   line-height: 1.625;
@@ -185,34 +190,34 @@
   color: color-mix(in srgb, #ffffff 90%, transparent);
 }
 
-.ccg-program-overview-page .init-hero__actions {
+.ccg-about-sections .init-hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1.75rem;
 }
 
-.ccg-program-overview-page .init-hero__actions .ds-c-button {
+.ccg-about-sections .init-hero__actions .ds-c-button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.ccg-program-overview-page .ccg-btn-accent.ds-c-button--solid {
+.ccg-about-sections .ccg-btn-accent.ds-c-button--solid {
   background: var(--color-accent-primary, #ffe400) !important;
   color: var(--color-primary-darkest, #07124a) !important;
   border-color: var(--color-accent-primary, #ffe400) !important;
 }
 
-.ccg-program-overview-page .ccg-btn-ghost-on-dark.ds-c-button--ghost {
+.ccg-about-sections .ccg-btn-ghost-on-dark.ds-c-button--ghost {
   border: 2px solid rgba(255, 255, 255, 0.35) !important;
   color: #ffffff !important;
   background: transparent !important;
 }
 
 /* Content sections */
-.ccg-program-overview-page .kc-content,
-.ccg-program-overview-page .wp-block-group.kc-content {
+.ccg-about-sections .kc-content,
+.ccg-about-sections .wp-block-group.kc-content {
   max-width: var(--fusion-site-max-width, 100rem);
   margin-left: auto;
   margin-right: auto;
@@ -220,21 +225,21 @@
 }
 
 @media (min-width: 768px) {
-  .ccg-program-overview-page .kc-content,
-  .ccg-program-overview-page .wp-block-group.kc-content {
+  .ccg-about-sections .kc-content,
+  .ccg-about-sections .wp-block-group.kc-content {
     padding-inline: var(--fusion-site-padding-x-md, 2rem);
   }
 }
 
-.ccg-program-overview-page .kc-section {
+.ccg-about-sections .kc-section {
   box-sizing: border-box;
   margin: 0 auto 4rem;
   padding: 4rem 0 0;
 }
 
-.ccg-program-overview-page .kc-section-heading,
-.ccg-program-overview-page h2.kc-section-heading.po-section-heading,
-.ccg-program-overview-page .wp-block-heading.kc-section-heading {
+.ccg-about-sections .kc-section-heading,
+.ccg-about-sections h2.kc-section-heading.po-section-heading,
+.ccg-about-sections .wp-block-heading.kc-section-heading {
   margin: 0;
   font-size: clamp(1.75rem, 2vw + 0.5rem, 3rem);
   line-height: 1.15;
@@ -243,9 +248,9 @@
   color: var(--color-base, #262626);
 }
 
-.ccg-program-overview-page .kc-section-subtitle,
-.ccg-program-overview-page .po-section-lede,
-.ccg-program-overview-page .wp-block-paragraph.kc-section-subtitle {
+.ccg-about-sections .kc-section-subtitle,
+.ccg-about-sections .po-section-lede,
+.ccg-about-sections .wp-block-paragraph.kc-section-subtitle {
   margin: 1rem 0 0;
   max-width: 48rem;
   font-size: 1.125rem;
@@ -255,7 +260,7 @@
 
 /* Platform cards */
 .po-platform-grid,
-.ccg-program-overview-page .wp-block-group.po-platform-grid {
+.ccg-about-sections .wp-block-group.po-platform-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
@@ -263,7 +268,7 @@
 }
 
 .po-platform-card,
-.ccg-program-overview-page .wp-block-group.po-platform-card {
+.ccg-about-sections .wp-block-group.po-platform-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -290,12 +295,12 @@
 }
 
 .po-platform-card__body,
-.ccg-program-overview-page .wp-block-group.po-platform-card__body {
+.ccg-about-sections .wp-block-group.po-platform-card__body {
   padding: 1.5rem;
 }
 
 h3.po-platform-card__title,
-.ccg-program-overview-page h3.wp-block-heading.po-platform-card__title {
+.ccg-about-sections h3.wp-block-heading.po-platform-card__title {
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -329,14 +334,14 @@ h3.po-platform-card__title,
 }
 
 .po-feature-grid,
-.ccg-program-overview-page .wp-block-group.po-feature-grid {
+.ccg-about-sections .wp-block-group.po-feature-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
 }
 
 .po-feature-card,
-.ccg-program-overview-page .wp-block-group.po-feature-card {
+.ccg-about-sections .wp-block-group.po-feature-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -378,7 +383,7 @@ h3.po-feature-card__title {
 
 /* Stats */
 .po-stats,
-.ccg-program-overview-page .wp-block-group.po-stats {
+.ccg-about-sections .wp-block-group.po-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2rem;
@@ -388,7 +393,7 @@ h3.po-feature-card__title {
 }
 
 .po-stat,
-.ccg-program-overview-page .wp-block-group.po-stat {
+.ccg-about-sections .wp-block-group.po-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,7 +402,7 @@ h3.po-feature-card__title {
 }
 
 .po-stat__value,
-.ccg-program-overview-page p.po-stat__value {
+.ccg-about-sections p.po-stat__value {
   margin: 0;
   font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
   font-weight: 700;
@@ -406,7 +411,7 @@ h3.po-feature-card__title {
 }
 
 .po-stat__label,
-.ccg-program-overview-page p.po-stat__label {
+.ccg-about-sections p.po-stat__label {
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.4;
@@ -488,9 +493,9 @@ h2.po-cta__heading {
 }
 
 /* Anchor scroll offset */
-.ccg-program-overview-page .kc-section,
-.ccg-program-overview-page .po-hero,
-.ccg-program-overview-page .po-cta {
+.ccg-about-sections .kc-section,
+.ccg-about-sections .po-hero,
+.ccg-about-sections .po-cta {
   scroll-margin-top: var(--ccg-site-nav-height, 5rem);
 }
 
@@ -510,7 +515,7 @@ h2.po-cta__heading {
 }
 
 @media (max-width: 640px) {
-  .ccg-program-overview-page .init-hero__inner.po-hero__inner {
+  .ccg-about-sections .init-hero__inner.po-hero__inner {
     min-height: auto;
     padding-top: 3rem;
     padding-bottom: 3rem;

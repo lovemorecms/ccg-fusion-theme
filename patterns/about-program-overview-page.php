@@ -7,8 +7,8 @@
  * Description: Complete Program Overview page — insert once on About → Program Overview.
  */
 ?>
-<!-- wp:group {"className":"program-overview","layout":{"type":"default"}} -->
-<div class="wp-block-group program-overview">
+<!-- wp:group {"align":"full","className":"ccg-about-sections program-overview","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull ccg-about-sections program-overview">
 <!-- wp:pattern {"slug":"ccg-wp-theme/about-hero-band"} /-->
 <!-- wp:pattern {"slug":"ccg-wp-theme/about-critical-work"} /-->
 <!-- wp:pattern {"slug":"ccg-wp-theme/about-features"} /-->

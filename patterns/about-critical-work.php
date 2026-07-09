@@ -10,8 +10,8 @@ $ccg_po_secure_img = esc_url( ccg_about_program_image_url( 'secure-platforms.jpg
 $ccg_po_scale_img  = esc_url( ccg_about_program_image_url( 'scalable-platforms.jpg' ) );
 $ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platforms.jpg' ) );
 ?>
-<!-- wp:group {"className":"kc-content","layout":{"type":"default"}} -->
-<div class="wp-block-group kc-content">
+<!-- wp:group {"className":"kc-content ccg-about-sections","layout":{"type":"default"}} -->
+<div class="wp-block-group kc-content ccg-about-sections">
 	<!-- wp:group {"tagName":"section","className":"kc-section","anchor":"critical-work","layout":{"type":"default"}} -->
 	<section id="critical-work" class="wp-block-group kc-section">
 		<!-- wp:heading {"level":2,"className":"kc-section-heading po-section-heading"} -->

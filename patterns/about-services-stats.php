@@ -7,8 +7,8 @@
  * Description: Services heading with uptime, support, compliance, and infrastructure stats.
  */
 ?>
-<!-- wp:group {"className":"kc-content","layout":{"type":"default"}} -->
-<div class="wp-block-group kc-content">
+<!-- wp:group {"className":"kc-content ccg-about-sections","layout":{"type":"default"}} -->
+<div class="wp-block-group kc-content ccg-about-sections">
 	<!-- wp:group {"tagName":"section","className":"kc-section","anchor":"services","layout":{"type":"default"}} -->
 	<section id="services" class="wp-block-group kc-section">
 		<!-- wp:heading {"level":2,"className":"kc-section-heading po-section-heading"} -->
