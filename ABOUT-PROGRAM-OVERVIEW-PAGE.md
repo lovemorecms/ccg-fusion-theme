@@ -3,9 +3,24 @@
 ## 1. Create the page
 
 1. **Pages → Add New**
-2. Title: **Program Overview**
-3. **Page → Template** (right sidebar): choose **Program Overview page**
+2. Title: **Program Overview** (used in admin/menus only when the no-title template is selected)
+3. **Page → Template** (right sidebar): choose **Program Overview page** or **Page (no title)**
 4. Permalink slug: `program-overview` under parent **About** (full path `/about/program-overview`)
+
+## Hide the WordPress page title
+
+Block themes do not have a core **Hide title** checkbox. This theme uses **templates** instead:
+
+| Template | Page title on front end |
+|----------|-------------------------|
+| **Page** (default) | Shows the page title above content |
+| **Page (no title)** | Hidden — patterns supply the hero heading |
+| **Program Overview page** | Hidden — same as no-title, plus Program Overview layout styles |
+| **Explore page** | Hidden |
+
+For any page built from section patterns (including **Test page 1** on the default template), the title is also hidden automatically when the content includes the `ccg-about-sections` wrapper from **Program Overview page layout**.
+
+**Editor:** switch **Page → Template** to **Page (no title)** so the title block does not appear in the canvas either.
 
 ## 2. Add content (choose one)
 

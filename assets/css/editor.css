@@ -1,0 +1,47 @@
+/**
+ * Block editor canvas — scoped layout fixes for marketing patterns.
+ */
+
+.editor-styles-wrapper {
+	font-family: var(--global__font-family, 'Open Sans', system-ui, sans-serif);
+	color: var(--color-gray-darkest, #262626);
+}
+
+.editor-styles-wrapper .ccg-fusion-toolkit-sections,
+.editor-styles-wrapper .ccg-about-sections {
+	max-width: none;
+}
+
+.editor-styles-wrapper .ccg-fusion-toolkit-sections .wp-block-group.alignfull,
+.editor-styles-wrapper .ccg-about-sections .wp-block-group.alignfull {
+	max-width: none;
+}
+
+/* Custom HTML blocks inherit section backgrounds in the canvas */
+.editor-styles-wrapper .ccg-fusion-toolkit-sections .wp-block-html {
+	margin-block: 0;
+}
+
+.editor-styles-wrapper .ccg-fusion-toolkit-sections .ft-hero,
+.editor-styles-wrapper .ccg-fusion-toolkit-sections .ft-section {
+	margin-left: 0;
+	margin-right: 0;
+	width: 100%;
+	max-width: none;
+}
+
+.editor-styles-wrapper .ccg-fusion-toolkit-sections .ft-sticky-nav {
+	display: none;
+}
+
+.editor-styles-wrapper .ccg-btn-accent.ds-c-button--solid {
+	background: var(--color-accent-primary, #ffe400) !important;
+	color: var(--color-primary-darkest, #07124a) !important;
+	border-color: var(--color-accent-primary, #ffe400) !important;
+}
+
+.editor-styles-wrapper .ccg-btn-ghost-on-dark.ds-c-button--ghost {
+	border: 2px solid rgba(255, 255, 255, 0.35) !important;
+	color: #ffffff !important;
+	background: transparent !important;
+}

@@ -22,7 +22,9 @@
     { "name": "footer", "title": "Footer", "area": "footer" }
   ],
   "customTemplates": [
+    { "name": "page-no-title", "title": "Page (no title)", "postTypes": ["page"] },
     { "name": "page-explore", "title": "Explore page", "postTypes": ["page"] },
-    { "name": "page-program-overview", "title": "Program Overview page", "postTypes": ["page"] }
+    { "name": "page-program-overview", "title": "Program Overview page", "postTypes": ["page"] },
+    { "name": "page-fusion-toolkit", "title": "Fusion Toolkit page", "postTypes": ["page"] }
   ]
 }

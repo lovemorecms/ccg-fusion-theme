@@ -11,7 +11,9 @@
   padding: 0;
 }
 
-.ccg-program-overview-page .wp-block-post-title {
+.ccg-program-overview-page .wp-block-post-title,
+.ccg-page-no-title .wp-block-post-title,
+.ccg-main:has(.ccg-about-sections) > .wp-block-post-title {
   display: none;
 }
 
@@ -246,7 +248,8 @@
   }
 }
 
-.ccg-about-sections .kc-section {
+.ccg-about-sections .kc-content .kc-section,
+.ccg-about-sections .wp-block-group.kc-content .kc-section {
   box-sizing: border-box;
   margin: 0 auto 4rem;
   padding: 4rem 0 0;

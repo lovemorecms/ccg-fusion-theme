@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CCG_WP_THEME_VERSION', '0.8.0' );
+define( 'CCG_WP_THEME_VERSION', '0.8.8' );
 define( 'CCG_CMSDS_VERSION', '12.4.5' );
 
 /**
@@ -20,18 +20,29 @@ function ccg_wp_theme_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'editor-styles' );
+	remove_theme_support( 'core-block-patterns' );
+}
+add_action( 'after_setup_theme', 'ccg_wp_theme_setup' );
+
+/**
+ * Editor iframe styles — CMS DS first, then theme section CSS (matches front-end stack).
+ */
+function ccg_wp_theme_register_editor_styles() {
 	add_editor_style(
 		array(
+			ccg_wp_theme_cmsds_style_url( 'cmsgov-theme.css' ),
+			ccg_wp_theme_cmsds_style_url( 'index.css' ),
 			'assets/css/theme.css',
 			'assets/css/mega-nav.css',
 			'assets/css/home.css',
 			'assets/css/explore.css',
 			'assets/css/program-overview.css',
+			'assets/css/fusion-toolkit.css',
+			'assets/css/editor.css',
 		)
 	);
-	remove_theme_support( 'core-block-patterns' );
 }
-add_action( 'after_setup_theme', 'ccg_wp_theme_setup' );
+add_action( 'after_setup_theme', 'ccg_wp_theme_register_editor_styles', 20 );
 add_filter( 'should_load_remote_block_patterns', '__return_false' );
 
 /**
@@ -87,6 +98,12 @@ function ccg_wp_theme_enqueue_assets() {
 		array( 'ccg-wp-theme' ),
 		CCG_WP_THEME_VERSION
 	);
+	wp_enqueue_style(
+		'ccg-wp-theme-fusion-toolkit',
+		get_template_directory_uri() . '/assets/css/fusion-toolkit.css',
+		array( 'ccg-wp-theme' ),
+		CCG_WP_THEME_VERSION
+	);
 
 	wp_enqueue_script(
 		'ccg-home-hero',
@@ -98,6 +115,13 @@ function ccg_wp_theme_enqueue_assets() {
 	wp_enqueue_script(
 		'ccg-home-announcements',
 		get_template_directory_uri() . '/assets/js/home-announcements.js',
+		array(),
+		CCG_WP_THEME_VERSION,
+		true
+	);
+	wp_enqueue_script(
+		'ccg-fusion-toolkit-sticky-nav',
+		get_template_directory_uri() . '/assets/js/fusion-toolkit-sticky-nav.js',
 		array(),
 		CCG_WP_THEME_VERSION,
 		true
@@ -163,6 +187,7 @@ function ccg_wp_theme_asset_url( $relative ) {
 }
 
 require_once get_template_directory() . '/inc/about/helpers.php';
+require_once get_template_directory() . '/inc/fusion-toolkit/helpers.php';
 require_once get_template_directory() . '/inc/mega-nav.php';
 require_once get_template_directory() . '/inc/usa-banner.php';
 require_once get_template_directory() . '/inc/site-search.php';

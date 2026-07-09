@@ -167,6 +167,28 @@ h1.init-hero__heading {
 
 .kc-section {
   margin-bottom: 64px;
+  box-sizing: border-box;
+  max-width: var(--fusion-site-max-width, 100rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--fusion-site-padding-x, 1.25rem);
+  padding-right: var(--fusion-site-padding-x, 1.25rem);
+}
+
+@media (min-width: 768px) {
+  .kc-section {
+    padding-left: var(--fusion-site-padding-x-md, 2rem);
+    padding-right: var(--fusion-site-padding-x-md, 2rem);
+  }
+}
+
+/* Horizontal inset comes from .kc-content when nested */
+.kc-content .kc-section {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 h2.kc-section-heading {

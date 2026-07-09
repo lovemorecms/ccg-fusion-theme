@@ -39,6 +39,27 @@ Optional: **Utilities → Sections scope wrapper** when assembling sections manu
 - **Page layouts → Home page layout** — full homepage starter
 - Explore sections live under **Hero**, **Cards**, **Content sections**, and **CTA** (not a separate Explore category)
 
+## Fusion Toolkit
+
+**Page layouts → Fusion Toolkit page layout** inserts all sections in order.
+
+Or build section by section (see **FUSION-TOOLKIT-PAGE.md**).
+
+| Order | Pattern |
+|------|---------|
+| 1 | Breadcrumbs → Fusion Toolkit breadcrumbs |
+| 2 | Utilities → Fusion Toolkit sticky nav |
+| 3 | Hero → Fusion Toolkit hero |
+| 4 | Cards → Fusion Toolkit product grid |
+| 5–8 | Content sections → BaseCamp, Helix, Lens, Match |
+| 9 | CTA → Fusion Toolkit footer band |
+
+Use the **Fusion Toolkit page** template (or **Page (no title)**) so the WordPress page title stays hidden.
+
+Optional: insert **Utilities → Fusion Toolkit sections scope wrapper** first if building section-by-section on a non–Fusion Toolkit template.
+
+After theme updates (v0.8.5+), re-insert **Fusion Toolkit page layout** or run `bin/setup-fusion-toolkit-page.php` so the full-bleed wrapper group is present.
+
 ## Slugs (developers)
 
 Internal slugs keep the `ccg-wp-theme/` prefix. Older `about-*` slugs remain registered for backward compatibility but are hidden from the inserter (`Inserter: no`).

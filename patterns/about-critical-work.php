@@ -6,9 +6,6 @@
  * Inserter: no
  * Description: Deprecated — use "Three image cards" in Cards.
  */
-$ccg_po_secure_img = esc_url( ccg_about_program_image_url( 'secure-platforms.jpg' ) );
-$ccg_po_scale_img  = esc_url( ccg_about_program_image_url( 'scalable-platforms.jpg' ) );
-$ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platforms.jpg' ) );
 ?>
 <!-- wp:group {"className":"kc-content ccg-about-sections","layout":{"type":"default"}} -->
 <div class="wp-block-group kc-content ccg-about-sections">
@@ -26,9 +23,7 @@ $ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platfo
 		<div class="wp-block-group po-platform-grid">
 			<!-- wp:group {"tagName":"article","className":"po-platform-card","layout":{"type":"default"}} -->
 			<article class="wp-block-group po-platform-card">
-				<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"po-platform-card__media"} -->
-				<figure class="wp-block-image size-large po-platform-card__media"><img src="<?php echo $ccg_po_secure_img; ?>" alt="" loading="lazy" decoding="async"/></figure>
-				<!-- /wp:image -->
+				<?php echo ccg_about_program_image_block( 'secure-platforms.jpg' ); ?>
 				<!-- wp:group {"className":"po-platform-card__body","layout":{"type":"default"}} -->
 				<div class="wp-block-group po-platform-card__body">
 					<!-- wp:heading {"level":3,"className":"po-platform-card__title"} -->
@@ -44,9 +39,7 @@ $ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platfo
 
 			<!-- wp:group {"tagName":"article","className":"po-platform-card","layout":{"type":"default"}} -->
 			<article class="wp-block-group po-platform-card">
-				<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"po-platform-card__media"} -->
-				<figure class="wp-block-image size-large po-platform-card__media"><img src="<?php echo $ccg_po_scale_img; ?>" alt="" loading="lazy" decoding="async"/></figure>
-				<!-- /wp:image -->
+				<?php echo ccg_about_program_image_block( 'scalable-platforms.jpg' ); ?>
 				<!-- wp:group {"className":"po-platform-card__body","layout":{"type":"default"}} -->
 				<div class="wp-block-group po-platform-card__body">
 					<!-- wp:heading {"level":3,"className":"po-platform-card__title"} -->
@@ -62,9 +55,7 @@ $ccg_po_stress_img = esc_url( ccg_about_program_image_url( 'stress-tested-platfo
 
 			<!-- wp:group {"tagName":"article","className":"po-platform-card","layout":{"type":"default"}} -->
 			<article class="wp-block-group po-platform-card">
-				<!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"po-platform-card__media"} -->
-				<figure class="wp-block-image size-large po-platform-card__media"><img src="<?php echo $ccg_po_stress_img; ?>" alt="" loading="lazy" decoding="async"/></figure>
-				<!-- /wp:image -->
+				<?php echo ccg_about_program_image_block( 'stress-tested-platforms.jpg' ); ?>
 				<!-- wp:group {"className":"po-platform-card__body","layout":{"type":"default"}} -->
 				<div class="wp-block-group po-platform-card__body">
 					<!-- wp:heading {"level":3,"className":"po-platform-card__title"} -->
