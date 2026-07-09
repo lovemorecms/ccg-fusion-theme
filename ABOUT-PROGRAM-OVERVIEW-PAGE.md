@@ -39,7 +39,9 @@ Insert **in this order**:
 
 Section headings and ledes in **hero**, **critical work**, **features**, **services & stats**, **security**, and **CTA** are core blocks — edit them directly in the editor.
 
-**Still Custom HTML (by design):** breadcrumb bar, hero buttons, platform image cards, stats row, security checklist icons, feature icons, and CTA button use CMS Design System markup that is easier to keep in HTML blocks.
+**Still Custom HTML (by design):** breadcrumb bar, hero buttons, security checklist (icons + list), feature icons, and CTA button — these use CMS Design System markup that is easier to keep in small HTML blocks.
+
+**Editable as blocks:** section headings/ledes, platform card images/titles/descriptions, stat values/labels, and feature card titles/descriptions.
 
 ## 3. Publish
 

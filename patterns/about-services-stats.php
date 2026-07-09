@@ -19,26 +19,50 @@
 		<p class="kc-section-subtitle po-section-lede">From legacy modernization to cloud migration, CMS offers comprehensive technology services designed to meet the unique demands of healthcare and human services programs.</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:html -->
-		<ul class="po-stats">
-			<li class="po-stat">
-				<span class="po-stat__value">99.99%</span>
-				<span class="po-stat__label">Uptime SLA</span>
-			</li>
-			<li class="po-stat">
-				<span class="po-stat__value">24/7</span>
-				<span class="po-stat__label">Support</span>
-			</li>
-			<li class="po-stat">
-				<span class="po-stat__value">100%</span>
-				<span class="po-stat__label">Compliant</span>
-			</li>
-			<li class="po-stat">
-				<span class="po-stat__value">Secure</span>
-				<span class="po-stat__label">Infrastructure</span>
-			</li>
-		</ul>
-		<!-- /wp:html -->
+		<!-- wp:group {"className":"po-stats","layout":{"type":"default"}} -->
+		<div class="wp-block-group po-stats">
+			<!-- wp:group {"className":"po-stat","layout":{"type":"default"}} -->
+			<div class="wp-block-group po-stat">
+				<!-- wp:paragraph {"className":"po-stat__value"} -->
+				<p class="po-stat__value">99.99%</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"po-stat__label"} -->
+				<p class="po-stat__label">Uptime SLA</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:group {"className":"po-stat","layout":{"type":"default"}} -->
+			<div class="wp-block-group po-stat">
+				<!-- wp:paragraph {"className":"po-stat__value"} -->
+				<p class="po-stat__value">24/7</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"po-stat__label"} -->
+				<p class="po-stat__label">Support</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:group {"className":"po-stat","layout":{"type":"default"}} -->
+			<div class="wp-block-group po-stat">
+				<!-- wp:paragraph {"className":"po-stat__value"} -->
+				<p class="po-stat__value">100%</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"po-stat__label"} -->
+				<p class="po-stat__label">Compliant</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+			<!-- wp:group {"className":"po-stat","layout":{"type":"default"}} -->
+			<div class="wp-block-group po-stat">
+				<!-- wp:paragraph {"className":"po-stat__value"} -->
+				<p class="po-stat__value">Secure</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph {"className":"po-stat__label"} -->
+				<p class="po-stat__label">Infrastructure</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
 	</section>
 	<!-- /wp:group -->
 </div>

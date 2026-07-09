@@ -10,8 +10,8 @@ $ccg_po_home_url    = esc_url( home_url( '/' ) );
 $ccg_po_about_url   = esc_url( ccg_nav_url( '/about/program-overview' ) );
 $ccg_po_get_started = esc_url( home_url( '/#pathways' ) );
 ?>
-<!-- wp:group {"tagName":"header","className":"tpl-2col-hero-band ccg-about-hero-band","layout":{"type":"default"}} -->
-<header class="wp-block-group tpl-2col-hero-band ccg-about-hero-band">
+<!-- wp:group {"tagName":"header","align":"full","className":"tpl-2col-hero-band ccg-about-hero-band","layout":{"type":"default"}} -->
+<header class="wp-block-group alignfull tpl-2col-hero-band ccg-about-hero-band">
 	<!-- wp:html -->
 	<div class="tpl-2col-breadcrumb-bar">
 		<nav aria-label="Breadcrumb" class="kc-breadcrumb-inner">

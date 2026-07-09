@@ -7,8 +7,8 @@
  * Description: Security standards section with checklist grid.
  */
 ?>
-<!-- wp:group {"tagName":"section","className":"po-band ccg-about-security","layout":{"type":"default"}} -->
-<section class="wp-block-group po-band ccg-about-security">
+<!-- wp:group {"tagName":"section","align":"full","className":"po-band ccg-about-security","layout":{"type":"default"}} -->
+<section class="wp-block-group alignfull po-band ccg-about-security">
 	<!-- wp:group {"className":"po-band__inner po-security","layout":{"type":"default"}} -->
 	<div class="wp-block-group po-band__inner po-security">
 		<!-- wp:heading {"level":2,"className":"kc-section-heading po-section-heading"} -->
