@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:html -->
-<section class="kc-section">
+<section class="kc-section" id="whats-happening">
 	<h2 class="kc-section-heading">What&rsquo;s Happening?</h2>
 	<p class="kc-section-subtitle">Stay informed with the latest updates and opportunities</p>
 	<div class="init-happening">

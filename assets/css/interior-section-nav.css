@@ -1,0 +1,273 @@
+/**
+ * Shared interior section nav (Azure/Google-style) — ported from React InteriorSectionNav.
+ * Used by Explore, Fusion Toolkit, and future landing templates.
+ */
+
+:root {
+  --fusion-nav-sticky-height: var(--ccg-site-nav-height, 5rem);
+  --fusion-breadcrumb-bar-height: var(--ccg-breadcrumb-bar-height, 2.75rem);
+  --fusion-sticky-stack-top: var(--ccg-sticky-stack-top, calc(var(--fusion-nav-sticky-height) + var(--fusion-breadcrumb-bar-height)));
+  --interior-section-nav-block-height: 3.75rem;
+}
+
+/* Collapse breadcrumb bar when interior section nav pins */
+#main-content:has(.interior-section-nav-root) .kc-breadcrumb-bar {
+  max-height: var(--fusion-breadcrumb-bar-height);
+  transition:
+    max-height 0.22s ease,
+    opacity 0.18s ease,
+    visibility 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.kc-breadcrumb-bar.fusion-interior-breadcrumb-bar--hidden {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom-width: 0;
+  pointer-events: none;
+}
+
+#main-content.interior-section-nav--page-pinned {
+  --fusion-sticky-stack-top: var(--fusion-nav-sticky-height);
+  --ccg-sticky-stack-top: var(--fusion-nav-sticky-height);
+}
+
+/*
+ * Hero-anchored interior section nav (resting on hero bottom edge, pins under site header).
+ * WP wraps the pattern in .wp-block-html — apply overlap on that wrapper so the pill
+ * docks into the hero like the React prototype (not sitting in a gap below it).
+ */
+.wp-block-html:has(.interior-section-nav-root),
+.interior-section-nav-root {
+  position: relative;
+  z-index: 5;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-top: calc(var(--interior-section-nav-block-height, 3.75rem) * -0.55) !important;
+  margin-bottom: 0.5rem;
+}
+
+.wp-block-html:has(.interior-section-nav-root) {
+  margin-block-end: 0.5rem !important;
+  padding: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.wp-block-html:has(.interior-section-nav-root) .interior-section-nav-root {
+  /* Overlap already applied on the WP HTML wrapper — avoid double pull */
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  padding: 0 var(--fusion-site-padding-x);
+  overflow-x: clip;
+}
+
+.interior-section-nav-root {
+  padding: 0 var(--fusion-site-padding-x);
+  overflow-x: clip;
+}
+
+.interior-section-nav__sentinel {
+  height: 1px;
+  width: 100%;
+  margin: 0;
+  pointer-events: none;
+}
+
+.interior-section-nav__spacer {
+  width: 100%;
+  pointer-events: none;
+}
+
+.interior-section-nav {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.interior-section-nav--pinned {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: none;
+  top: var(--fusion-nav-sticky-height);
+  z-index: 55;
+  margin-top: 0;
+  padding: 0.25rem var(--fusion-site-padding-x);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .wp-block-html:has(.interior-section-nav-root) .interior-section-nav-root,
+  .interior-section-nav-root {
+    padding-left: var(--fusion-site-padding-x-md);
+    padding-right: var(--fusion-site-padding-x-md);
+  }
+
+  .interior-section-nav--pinned {
+    padding-left: var(--fusion-site-padding-x-md);
+    padding-right: var(--fusion-site-padding-x-md);
+  }
+}
+
+.interior-section-nav__wrap {
+  max-width: var(--fusion-site-max-width);
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.interior-section-nav__shell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.25rem;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.375rem 0.375rem 0.375rem 0.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-gray-lighter) 85%, var(--color-primary-lightest));
+  border-radius: 2rem;
+  background: var(--color-white);
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-primary-darkest) 6%, transparent),
+    0 8px 24px color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.interior-section-nav__nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.interior-section-nav__track {
+  position: relative;
+  min-width: 0;
+}
+
+#main-content .interior-section-nav ul.interior-section-nav__list,
+.interior-section-nav__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0 0.5rem;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.interior-section-nav__indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0.2rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+  pointer-events: none;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.18s ease;
+  will-change: transform, width;
+}
+
+#main-content .interior-section-nav ul.interior-section-nav__list > li,
+.interior-section-nav__list > li {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.interior-section-nav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.interior-section-nav__item {
+  flex-shrink: 0;
+}
+
+.interior-section-nav__link {
+  position: relative;
+  display: block;
+  padding: 0.625rem 0.875rem;
+  font-family: var(--global__font-family, 'Open Sans', 'Inter', system-ui, sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--color-primary-darker);
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.interior-section-nav__link:hover {
+  color: var(--color-primary-darkest);
+  background: color-mix(in srgb, var(--color-primary-lightest) 45%, transparent);
+}
+
+.interior-section-nav__link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.interior-section-nav__link--active {
+  color: var(--color-primary-darkest);
+  font-weight: 600;
+}
+
+.interior-section-nav__link--active::after {
+  content: none;
+}
+
+.interior-section-nav__cta {
+  flex: 0 0 auto;
+  margin-right: 0.125rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .interior-section-nav__shell {
+    border-radius: 1rem;
+    padding: 0.375rem 0.5rem;
+  }
+
+  .interior-section-nav__cta .ds-c-button {
+    font-size: 0.8125rem;
+    padding-inline: 0.875rem;
+  }
+}
+
+/* Narrow viewports: keep CTA, let links scroll inside the track */
+@media (max-width: 640px) {
+  .interior-section-nav__cta .ds-c-button {
+    max-width: 9.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interior-section-nav__indicator {
+    transition: none;
+  }
+
+  #main-content:has(.interior-section-nav-root) .kc-breadcrumb-bar {
+    transition: none;
+  }
+}

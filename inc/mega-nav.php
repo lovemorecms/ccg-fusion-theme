@@ -65,13 +65,15 @@ function ccg_mega_nav_render_panel( $panel, $category, $menu_item ) {
 	);
 
 	if ( ( $panel['type'] ?? '' ) === 'empty' ) {
+		echo '<div class="fusion-nav-v2__panel-content">';
 		echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '</div>';
 		return;
 	}
 
 	if ( in_array( $panel['type'], array( 'list', 'cards' ), true ) ) {
-		echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<div class="fusion-nav-v2__panel-content fusion-nav-v2__panel-content--list">';
+		echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<ul class="fusion-nav-v2__link-list">';
 		foreach ( $panel['links'] as $link ) {
 			printf(
@@ -87,9 +89,10 @@ function ccg_mega_nav_render_panel( $panel, $category, $menu_item ) {
 	if ( 'columns' === ( $panel['type'] ?? '' ) ) {
 		$count = count( $panel['columns'] );
 		$cols  = 4 === $count ? '4' : ( 3 === $count ? '3' : '2' );
+		echo '<div class="fusion-nav-v2__panel-content fusion-nav-v2__panel-content--columns">';
 		echo $title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		printf(
-			'<div class="fusion-nav-v2__panel-content fusion-nav-v2__panel-content--columns"><div class="fusion-nav-v2__columns fusion-nav-v2__columns--%s">',
+			'<div class="fusion-nav-v2__columns fusion-nav-v2__columns--%s">',
 			esc_attr( $cols )
 		);
 		foreach ( $panel['columns'] as $col ) {
@@ -245,6 +248,10 @@ function ccg_render_mega_nav_header() {
 					aria-label="<?php echo esc_attr( $item['label'] . ' menu' ); ?>"
 					hidden
 				>
+					<div class="fusion-nav-v2__mega-bridge" aria-hidden="true"></div>
+					<div class="fusion-nav-v2__mega-atmosphere" aria-hidden="true"></div>
+					<div class="fusion-nav-v2__mega-veil" aria-hidden="true"></div>
+					<div class="fusion-nav-v2__mega-swap">
 					<div class="fusion-nav-v2__mega-container">
 						<div class="fusion-nav-v2__mega-inner">
 							<div class="fusion-nav-v2__left">
@@ -292,6 +299,7 @@ function ccg_render_mega_nav_header() {
 								<?php endforeach; ?>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			<?php endforeach; ?>

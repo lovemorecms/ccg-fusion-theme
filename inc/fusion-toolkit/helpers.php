@@ -30,8 +30,8 @@ function ccg_fusion_toolkit_render_pattern_file( $pattern_file ) {
 function ccg_fusion_toolkit_page_content() {
 	$sections = array(
 		'fusion-toolkit-breadcrumbs.php',
-		'fusion-toolkit-sticky-nav.php',
 		'fusion-toolkit-hero.php',
+		'fusion-toolkit-sticky-nav.php',
 		'fusion-toolkit-product-grid.php',
 		'fusion-toolkit-product-basecamp.php',
 		'fusion-toolkit-product-helix.php',

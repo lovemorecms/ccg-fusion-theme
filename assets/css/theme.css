@@ -193,10 +193,14 @@ html.ccg-mega-nav-open {
   padding: 0 var(--fusion-site-padding-x) 3rem;
 }
 
-/* Homepage — full-bleed sections (details in home.css) */
+/* Homepage + interior heroes — full-bleed sections (site standard) */
 .ccg-main.ccg-main--home,
 .ccg-main:has(.ccg-home-page),
-.ccg-main:has(.fusion-hero) {
+.ccg-main:has(.fusion-hero),
+.ccg-main:has(.ft-hero),
+.ccg-main:has(.init-hero),
+.ccg-main.ccg-landing-page,
+.ccg-main.lpl-page {
   max-width: none;
   padding: 0;
 }
@@ -205,6 +209,7 @@ html.ccg-mega-nav-open {
 .ccg-main,
 .ccg-main .ccg-hero,
 .ccg-main .init-hero,
+.ccg-main .ft-hero,
 .ccg-main .alignfull {
   position: relative;
   z-index: 0;
@@ -262,12 +267,6 @@ html.ccg-mega-nav-open {
   margin-top: 2rem;
 }
 
-.ccg-btn-secondary.ds-c-button--ghost {
-  background: color-mix(in srgb, var(--color-gray-lighter, #e6e6e6) 65%, #ffffff) !important;
-  border-color: color-mix(in srgb, var(--color-gray-light, #a6a6a6) 80%, transparent) !important;
-  color: var(--color-gray-darkest, #1a1a1a) !important;
-}
-
 .ccg-two-col {
   padding: 2rem 0;
   gap: 2rem;
@@ -301,12 +300,6 @@ html.ccg-mega-nav-open {
 
 .ccg-cta-band__actions {
   margin-top: 1.5rem;
-}
-
-.ccg-cta-band__btn.ds-c-button--solid {
-  background: #ffffff !important;
-  color: var(--color-primary-darkest, #07124a) !important;
-  border-color: #ffffff !important;
 }
 
 /* Footer — prototype CMS three-column */

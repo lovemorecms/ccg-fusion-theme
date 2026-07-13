@@ -61,20 +61,7 @@
   gap: 1rem;
 }
 
-/* Hero / marketing CTAs (shared with Explore) */
-.fusion-hero .ccg-btn-accent.ds-c-button--solid,
-.fusion-multi-cloud .ccg-btn-accent.ds-c-button--solid,
-.fusion-announcements .ccg-btn-accent.ds-c-button--solid {
-  background: var(--color-accent-primary, #ffe400) !important;
-  color: var(--color-primary-darkest, #07124a) !important;
-  border-color: var(--color-accent-primary, #ffe400) !important;
-}
-
-.fusion-hero .ccg-btn-ghost-on-dark.ds-c-button--ghost {
-  border: 2px solid rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-  background: transparent !important;
-}
+/* Hero / marketing CTAs — tokens in assets/css/buttons.css */
 
 @media (min-width: 768px) {
   .fusion-quick-access__inner,
@@ -772,10 +759,7 @@
   margin-top: 1.5rem;
 }
 
-.fusion-academy__cta-secondary.ds-c-button--ghost {
-  border: 2px solid var(--fusion-blue-deep);
-  color: var(--fusion-blue-deep);
-}
+/* Academy secondary CTA tokens: assets/css/buttons.css */
 
 #main-content .fusion-academy ul.fusion-academy-offerings__grid,
 #main-content .fusion-academy ul.fusion-academy-offerings__grid > li {

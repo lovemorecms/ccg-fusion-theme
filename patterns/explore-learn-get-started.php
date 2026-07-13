@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:html -->
-<section class="kc-section">
+<section class="kc-section" id="learn-connect">
 	<div class="init-bottom-grid">
 		<div class="init-learn">
 			<h2 class="init-learn__heading">Learn &amp; Connect</h2>

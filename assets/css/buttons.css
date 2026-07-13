@@ -1,0 +1,170 @@
+/**
+ * CMS.gov Design System button tokens — shared hover / focus / active states.
+ * Uses DS custom properties (--backgroundColor--h, etc.) instead of static !important colors.
+ */
+
+/* Beat global link styles when DS buttons render as <a> */
+a.ds-c-button,
+a.ds-c-button:link,
+a.ds-c-button:visited,
+a.ds-c-button:hover,
+a.ds-c-button:focus,
+a.ds-c-button:active {
+  text-decoration: none;
+}
+
+/* ── Yellow accent solid (primary marketing CTA) ── */
+.ccg-btn-accent.ds-c-button--solid,
+.ccg-btn-accent.ds-c-button--solid:link,
+.ccg-btn-accent.ds-c-button--solid:visited,
+a.ds-c-button--solid.ccg-btn-accent {
+  --backgroundColor: var(--color-accent-primary, #ffe400);
+  --borderColor: var(--color-accent-primary, #ffe400);
+  --color: var(--color-primary, #005ea2);
+  --backgroundColor--h: var(--color-accent-primary-dark, #cdb700);
+  --borderColor--h: var(--color-accent-primary-dark, #cdb700);
+  --color--h: var(--color-primary-darkest, #07124a);
+  --backgroundColor--a: var(--color-accent-primary-darker, #9a8600);
+  --borderColor--a: var(--color-accent-primary-darker, #9a8600);
+  --color--a: var(--color-primary-darkest, #07124a);
+  --backgroundColor--d: var(--color-gray-lightest, #f3f3f3);
+  --borderColor--d: var(--color-gray-lighter, #e6e6e6);
+  --color--d: var(--color-gray-dark, #5a5a5a);
+}
+
+/* ── Ghost on dark hero / CTA bands ── */
+.ccg-btn-ghost-on-dark.ds-c-button--ghost,
+.ccg-btn-ghost-on-dark.ds-c-button--ghost:link,
+.ccg-btn-ghost-on-dark.ds-c-button--ghost:visited,
+a.ds-c-button--ghost.ccg-btn-ghost-on-dark {
+  --backgroundColor: transparent;
+  --borderColor: rgba(255, 255, 255, 0.35);
+  --color: #ffffff;
+  --backgroundColor--h: rgba(255, 255, 255, 0.1);
+  --borderColor--h: rgba(255, 255, 255, 0.55);
+  --color--h: #ffffff;
+  --backgroundColor--a: rgba(255, 255, 255, 0.15);
+  --borderColor--a: rgba(255, 255, 255, 0.7);
+  --color--a: #ffffff;
+  border-width: 2px;
+}
+
+/* ── Light secondary ghost (hero on light gradient) ── */
+.ft-btn-secondary.ds-c-button--ghost,
+.ccg-btn-secondary.ds-c-button--ghost,
+.ft-btn-secondary.ds-c-button--ghost:link,
+.ccg-btn-secondary.ds-c-button--ghost:link,
+.ft-btn-secondary.ds-c-button--ghost:visited,
+.ccg-btn-secondary.ds-c-button--ghost:visited {
+  --backgroundColor: color-mix(in srgb, var(--color-gray-lighter, #e6e6e6) 65%, #ffffff);
+  --borderColor: color-mix(in srgb, var(--color-gray-light, #a6a6a6) 80%, transparent);
+  --color: var(--color-gray-darkest, #1a1a1a);
+  --backgroundColor--h: color-mix(in srgb, var(--color-gray-lighter, #e6e6e6) 85%, #ffffff);
+  --borderColor--h: var(--color-gray-light, #a6a6a6);
+  --color--h: var(--color-gray-darkest, #1a1a1a);
+  --backgroundColor--a: var(--color-gray-lighter, #e6e6e6);
+  --borderColor--a: var(--color-gray, #808080);
+  --color--a: var(--color-gray-darkest, #1a1a1a);
+}
+
+/* ── White solid on dark CTA band ── */
+.ccg-cta-band__btn.ds-c-button--solid,
+.ccg-cta-band__btn.ds-c-button--solid:link,
+.ccg-cta-band__btn.ds-c-button--solid:visited {
+  --backgroundColor: #ffffff;
+  --borderColor: #ffffff;
+  --color: var(--color-primary-darkest, #07124a);
+  --backgroundColor--h: var(--color-gray-lightest, #f3f3f3);
+  --borderColor--h: var(--color-gray-lightest, #f3f3f3);
+  --color--h: var(--color-primary-darkest, #07124a);
+  --backgroundColor--a: var(--color-gray-lighter, #e6e6e6);
+  --borderColor--a: var(--color-gray-lighter, #e6e6e6);
+  --color--a: var(--color-primary-darkest, #07124a);
+}
+
+/* ── Academy secondary — blue outline on white ── */
+.fusion-academy__cta-secondary.ds-c-button--ghost,
+.fusion-academy__cta-secondary.ds-c-button--ghost:link,
+.fusion-academy__cta-secondary.ds-c-button--ghost:visited {
+  --backgroundColor: var(--color-white, #ffffff);
+  --borderColor: var(--fusion-blue-deep, var(--color-primary-darker, #0d2499));
+  --color: var(--fusion-blue-deep, var(--color-primary-darker, #0d2499));
+  --backgroundColor--h: color-mix(in srgb, var(--color-primary-lightest, #e8f1fb) 35%, #ffffff);
+  --borderColor--h: var(--color-primary-darker, #0d2499);
+  --color--h: var(--color-primary-darker, #0d2499);
+  --backgroundColor--a: color-mix(in srgb, var(--color-primary-lightest, #e8f1fb) 50%, #ffffff);
+  --borderColor--a: var(--color-primary-darkest, #07124a);
+  --color--a: var(--color-primary-darkest, #07124a);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+/* ── Landing card ghost CTA ── */
+.lpl-card .lpl-card__cta.ds-c-button--ghost,
+.lpl-card .lpl-card__cta.ds-c-button--ghost:link,
+.lpl-card .lpl-card__cta.ds-c-button--ghost:visited {
+  --backgroundColor: var(--color-white, #ffffff);
+  --borderColor: var(--color-primary, #005ea2);
+  --color: var(--color-primary, #005ea2);
+  --backgroundColor--h: color-mix(in srgb, var(--color-primary-lightest, #e8f1fb) 40%, #ffffff);
+  --borderColor--h: var(--color-primary-darker, #0d2499);
+  --color--h: var(--color-primary-darker, #0d2499);
+  --backgroundColor--a: color-mix(in srgb, var(--color-primary-lightest, #e8f1fb) 55%, #ffffff);
+  --borderColor--a: var(--color-primary-darkest, #07124a);
+  --color--a: var(--color-primary-darkest, #07124a);
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+/* ── Text-link ghost CTAs (Explore cards / happening rows) ── */
+.init-card__cta.ds-c-button--ghost,
+.init-happening__cta.ds-c-button--ghost,
+.init-card__cta.ds-c-button--ghost:link,
+.init-happening__cta.ds-c-button--ghost:link,
+.init-card__cta.ds-c-button--ghost:visited,
+.init-happening__cta.ds-c-button--ghost:visited {
+  --backgroundColor: transparent;
+  --borderColor: transparent;
+  --color: var(--color-primary, #005ea2);
+  --backgroundColor--h: transparent;
+  --borderColor--h: transparent;
+  --color--h: var(--color-primary-darker, #0d2499);
+  --backgroundColor--a: transparent;
+  --borderColor--a: transparent;
+  --color--a: var(--color-primary-darkest, #07124a);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 0;
+  padding: 0;
+  border-width: 0;
+  background: transparent;
+  box-shadow: none;
+  font-weight: 700;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.init-happening__cta.ds-c-button--ghost,
+.init-happening__cta.ds-c-button--ghost:link,
+.init-happening__cta.ds-c-button--ghost:visited {
+  font-weight: 500;
+  text-transform: none;
+}
+
+.init-card__cta.ds-c-button--ghost:hover,
+.init-card__cta.ds-c-button--ghost:focus,
+.init-happening__cta.ds-c-button--ghost:hover,
+.init-happening__cta.ds-c-button--ghost:focus {
+  gap: 0.5rem;
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .init-card__cta.ds-c-button--ghost,
+  .init-happening__cta.ds-c-button--ghost,
+  .fusion-academy__cta-secondary.ds-c-button--ghost {
+    transition: none;
+  }
+}

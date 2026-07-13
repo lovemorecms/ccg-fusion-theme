@@ -2,12 +2,18 @@
  * Explore page — matches FUSION Sphere ExplorePage prototype (init-* / kc-* sections).
  */
 
-/* Breadcrumb strip (dark CMS primary) — sticks under site chrome while scrolling */
+/* Explore page shell — shared interior section nav height */
+.ccg-explore-page {
+  --interior-section-nav-block-height: 3.75rem;
+  max-width: none;
+  overflow-x: clip;
+}
+
+/* Breadcrumb strip (dark CMS primary) — hides when interior section nav pins */
 .ccg-explore-page .kc-breadcrumb-bar,
 .ccg-explore .kc-breadcrumb-bar,
 .kc-breadcrumb-bar.kc-breadcrumb-bar--initiatives {
-  position: sticky;
-  top: var(--ccg-site-nav-height, 3.75rem);
+  position: relative;
   z-index: 55;
   margin: 0;
   background: linear-gradient(
@@ -105,6 +111,33 @@
   padding: 64px var(--fusion-site-padding-x, 2rem) 72px;
 }
 
+.init-hero.init-hero--with-section-nav {
+  padding-bottom: 0;
+}
+
+.init-hero.init-hero--with-section-nav .init-hero__inner {
+  padding-bottom: clamp(4.5rem, 7vw, 5.5rem);
+}
+
+.ccg-explore-page #overview.init-hero {
+  /* Tall enough for the right-side orbit art; cover was cropping top/bottom. */
+  min-height: clamp(32rem, 58vh, 40rem);
+}
+
+.ccg-explore-page #overview.init-hero.init-hero--with-section-nav .init-hero__inner {
+  min-height: clamp(32rem, 58vh, 40rem);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-top: clamp(4.5rem, 7vw, 6rem);
+  /* Extra bottom room so section-nav overlap does not clip the orbits */
+  padding-bottom: clamp(6.25rem, 10vw, 8rem);
+}
+
+.ccg-explore-page #overview.init-hero .init-hero__bg-img {
+  object-position: 86% 46%;
+}
+
 .init-hero__text {
   max-width: 36rem;
 }
@@ -145,17 +178,7 @@ h1.init-hero__heading {
   margin-top: 28px;
 }
 
-.ccg-btn-accent.ds-c-button--solid {
-  background: var(--color-accent-primary, #ffe400) !important;
-  color: var(--color-primary-darkest, #07124a) !important;
-  border-color: var(--color-accent-primary, #ffe400) !important;
-}
-
-.ccg-btn-ghost-on-dark.ds-c-button--ghost {
-  border: 2px solid rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-  background: transparent !important;
-}
+/* Accent + ghost-on-dark button tokens: assets/css/buttons.css */
 
 /* Content shell */
 .kc-content {
@@ -277,16 +300,9 @@ h3.init-card__title {
 
 .init-card__cta {
   margin-top: 16px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-primary, #005ea2);
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
-.init-card__cta:hover {
-  color: var(--color-primary-darker, #0d2499);
-}
+/* Text-link ghost CTA hover: assets/css/buttons.css */
 
 /* Timeline (simplified) */
 .init-timeline {
@@ -492,6 +508,10 @@ h3.init-timeline__hq-title {
   flex: 1;
 }
 
+.init-happening__cta {
+  margin-top: 16px;
+}
+
 /* Learn + get started */
 .init-bottom-grid {
   display: grid;
@@ -682,6 +702,12 @@ h3.kc-glass-card__title {
   margin-block-end: 0 !important;
 }
 
+/* Dock section nav into bottom of Explore hero (match React overlap) */
+.ccg-explore-page .wp-block-html:has(.init-hero) + .wp-block-html:has(.interior-section-nav-root),
+.ccg-explore-page .ccg-explore-hero-wrap + .wp-block-html:has(.interior-section-nav-root) {
+  margin-block-start: calc(var(--interior-section-nav-block-height, 3.75rem) * -0.55) !important;
+}
+
 .ccg-explore-page .init-hero {
   margin-top: 0;
 }
@@ -696,7 +722,7 @@ h3.kc-glass-card__title {
 
 .ccg-explore-page .kc-section#platforms {
   margin-top: 0 !important;
-  padding-top: 4rem;
+  padding-top: clamp(2rem, 3vw, 2.75rem);
 }
 
 .ccg-explore-page .kc-section#platforms .kc-section-heading {
@@ -708,10 +734,17 @@ h3.kc-glass-card__title {
   margin-bottom: 0 !important;
 }
 
-/* Anchor targets clear sticky chrome + breadcrumb */
-.ccg-explore-page .kc-section,
-.ccg-explore-page .init-hero {
-  scroll-margin-top: var(--ccg-sticky-stack-top, 9rem);
+/* Anchor targets clear site header + pinned interior section nav */
+.ccg-explore-page #overview.init-hero {
+  scroll-margin-top: var(--fusion-sticky-stack-top, var(--ccg-sticky-stack-top, 5.5rem));
+}
+
+.ccg-explore-page .kc-section[id],
+.ccg-explore-page .kc-getting-started {
+  scroll-margin-top: calc(
+    var(--fusion-sticky-stack-top, var(--ccg-sticky-stack-top, 5.5rem)) +
+      var(--interior-section-nav-block-height, 3.75rem)
+  );
 }
 
 @media (max-width: 1024px) {

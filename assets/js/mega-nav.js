@@ -19,6 +19,14 @@
 
   var activeMenu = '';
   var mobileOpen = false;
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function replayAnimation(el) {
+    if (!el || reducedMotion) return;
+    el.style.animation = 'none';
+    void el.offsetHeight;
+    el.style.animation = '';
+  }
 
   function setBodyScroll(lock) {
     document.documentElement.classList.toggle('ccg-mega-nav-open', lock);
@@ -65,16 +73,24 @@
     megas.forEach(function (mega) {
       mega.hidden = mega.id !== 'fusion-nav-v2-mega-' + menuId;
     });
-    if (overlay) overlay.hidden = false;
+    var activeMega = root.querySelector('#fusion-nav-v2-mega-' + menuId);
+    if (activeMega) {
+      replayAnimation(activeMega);
+      replayAnimation(activeMega.querySelector('.fusion-nav-v2__mega-swap'));
+    }
+    if (overlay) {
+      overlay.hidden = false;
+      replayAnimation(overlay);
+    }
     setBodyScroll(true);
     document.dispatchEvent(new CustomEvent('ccg:mega-nav-open'));
     var firstCat = root.querySelector(
       '.fusion-nav-v2__category[data-menu="' + menuId + '"]'
     );
-    if (firstCat) selectCategory(menuId, firstCat.getAttribute('data-category'), false);
+    if (firstCat) selectCategory(menuId, firstCat.getAttribute('data-category'), false, false);
   }
 
-  function selectCategory(menuId, categoryId, focusTab) {
+  function selectCategory(menuId, categoryId, focusTab, animate) {
     categoryTabs.forEach(function (tab) {
       var match =
         tab.getAttribute('data-menu') === menuId &&
@@ -88,6 +104,9 @@
         pane.getAttribute('data-menu') === menuId &&
         pane.getAttribute('data-category') === categoryId;
       pane.hidden = !match;
+      if (match && animate) {
+        replayAnimation(pane.querySelector('.fusion-nav-v2__panel-content'));
+      }
     });
     if (focusTab) {
       var tab = root.querySelector(
@@ -145,14 +164,16 @@
       selectCategory(
         tab.getAttribute('data-menu'),
         tab.getAttribute('data-category'),
-        false
+        false,
+        true
       );
     });
     tab.addEventListener('focus', function () {
       selectCategory(
         tab.getAttribute('data-menu'),
         tab.getAttribute('data-category'),
-        false
+        false,
+        true
       );
     });
   });

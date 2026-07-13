@@ -78,6 +78,7 @@ function ccg_render_site_footer() {
 			<nav class="fusion-site-footer__nav" aria-labelledby="fusion-site-footer-heading-resources">
 				<h3 id="fusion-site-footer-heading-resources" class="fusion-site-footer__heading"><?php esc_html_e( 'Additional resources', 'ccg-wp-theme' ); ?></h3>
 				<ul class="fusion-site-footer__list">
+					<li><a class="fusion-site-footer__link" href="<?php echo esc_url( home_url( '/resources/page-layouts/' ) ); ?>"><?php esc_html_e( 'Page layouts', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://design.cms.gov/"><?php esc_html_e( 'CMS Design System', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://www.usa.gov/"><?php esc_html_e( 'USA.gov', 'ccg-wp-theme' ); ?></a></li>
 				</ul>

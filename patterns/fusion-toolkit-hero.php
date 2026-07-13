@@ -3,12 +3,12 @@
  * Title: Fusion Toolkit hero
  * Slug: ccg-wp-theme/fusion-toolkit-hero
  * Categories: ccg-hero
- * Description: Glossy CMS primary hero with gradient title and CTAs.
+ * Description: Glossy CMS primary hero with gradient title and CTAs (section-nav overlap ready).
  */
 $kc_url = esc_url( ccg_nav_url( '/learn/knowledge-center' ) );
 ?>
-<!-- wp:group {"tagName":"section","align":"full","className":"ft-hero ccg-fusion-toolkit-sections","anchor":"overview","layout":{"type":"default"}} -->
-<section id="overview" class="wp-block-group alignfull ft-hero ccg-fusion-toolkit-sections" aria-labelledby="ft-hero-heading" tabindex="-1">
+<!-- wp:group {"tagName":"section","align":"full","className":"ft-hero ft-hero--with-section-nav ccg-fusion-toolkit-sections","anchor":"overview","layout":{"type":"default"}} -->
+<section id="overview" class="wp-block-group alignfull ft-hero ft-hero--with-section-nav ccg-fusion-toolkit-sections" aria-labelledby="ft-hero-heading" tabindex="-1">
 	<!-- wp:html -->
 	<div class="ft-hero__glow ft-hero__glow--one" aria-hidden="true"></div>
 	<div class="ft-hero__glow ft-hero__glow--two" aria-hidden="true"></div>

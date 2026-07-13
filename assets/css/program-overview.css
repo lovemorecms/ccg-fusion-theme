@@ -214,17 +214,7 @@
   gap: 0.5rem;
 }
 
-.ccg-about-sections .ccg-btn-accent.ds-c-button--solid {
-  background: var(--color-accent-primary, #ffe400) !important;
-  color: var(--color-primary-darkest, #07124a) !important;
-  border-color: var(--color-accent-primary, #ffe400) !important;
-}
-
-.ccg-about-sections .ccg-btn-ghost-on-dark.ds-c-button--ghost {
-  border: 2px solid rgba(255, 255, 255, 0.35) !important;
-  color: #ffffff !important;
-  background: transparent !important;
-}
+/* Button tokens: assets/css/buttons.css */
 
 /* Content sections — white bands (same node or nested) */
 .kc-content.ccg-about-sections,
@@ -504,11 +494,7 @@ h2.po-cta__heading {
   margin-top: 2rem;
 }
 
-.po-cta .ccg-btn-accent.ds-c-button--solid {
-  background: var(--color-accent-primary, #ffe400) !important;
-  color: var(--color-primary-darkest, #07124a) !important;
-  border-color: var(--color-accent-primary, #ffe400) !important;
-}
+/* Button tokens: assets/css/buttons.css */
 
 /* Anchor scroll offset */
 .ccg-about-sections .kc-section,

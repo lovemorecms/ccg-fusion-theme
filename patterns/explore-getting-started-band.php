@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:html -->
-<section class="kc-getting-started">
+<section class="kc-getting-started" id="getting-started">
 	<div class="kc-getting-started__inner">
 		<h2 class="kc-getting-started__heading">Getting started with CMS Hybrid Cloud</h2>
 		<div class="kc-getting-started__grid">

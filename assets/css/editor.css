@@ -33,15 +33,3 @@
 .editor-styles-wrapper .ccg-fusion-toolkit-sections .ft-sticky-nav {
 	display: none;
 }
-
-.editor-styles-wrapper .ccg-btn-accent.ds-c-button--solid {
-	background: var(--color-accent-primary, #ffe400) !important;
-	color: var(--color-primary-darkest, #07124a) !important;
-	border-color: var(--color-accent-primary, #ffe400) !important;
-}
-
-.editor-styles-wrapper .ccg-btn-ghost-on-dark.ds-c-button--ghost {
-	border: 2px solid rgba(255, 255, 255, 0.35) !important;
-	color: #ffffff !important;
-	background: transparent !important;
-}

@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:html -->
-<section class="kc-section">
+<section class="kc-section" id="roadmap">
 	<h2 class="kc-section-heading" id="explore-timeline">Platform &amp; Service Roadmap</h2>
 	<p class="kc-section-subtitle">Track availability and rollout across the year</p>
 	<div class="init-timeline" role="region" aria-labelledby="explore-timeline">
