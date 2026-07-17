@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CCG_WP_THEME_VERSION', '0.10.23' );
+define( 'CCG_WP_THEME_VERSION', '0.10.25' );
 define( 'CCG_CMSDS_VERSION', '12.4.5' );
 
 /**
@@ -153,6 +153,12 @@ function ccg_wp_theme_enqueue_assets() {
 		array( 'ccg-wp-theme-landing-page-layout', 'ccg-wp-theme-platform-article', 'ccg-wp-theme-shared-services', 'ccg-wp-theme-about-hybrid-cloud' ),
 		CCG_WP_THEME_VERSION
 	);
+	wp_enqueue_style(
+		'ccg-wp-theme-floating-assist',
+		get_template_directory_uri() . '/assets/css/floating-assist.css',
+		array( 'ccg-wp-theme' ),
+		CCG_WP_THEME_VERSION
+	);
 
 	wp_enqueue_script(
 		'ccg-home-hero',
@@ -185,6 +191,13 @@ function ccg_wp_theme_enqueue_assets() {
 	wp_enqueue_script(
 		'ccg-shared-services',
 		get_template_directory_uri() . '/assets/js/shared-services.js',
+		array(),
+		CCG_WP_THEME_VERSION,
+		true
+	);
+	wp_enqueue_script(
+		'ccg-floating-assist',
+		get_template_directory_uri() . '/assets/js/floating-assist.js',
 		array(),
 		CCG_WP_THEME_VERSION,
 		true
@@ -262,3 +275,4 @@ require_once get_template_directory() . '/inc/mega-nav.php';
 require_once get_template_directory() . '/inc/usa-banner.php';
 require_once get_template_directory() . '/inc/site-search.php';
 require_once get_template_directory() . '/inc/footer.php';
+require_once get_template_directory() . '/inc/floating-assist.php';
