@@ -70,6 +70,11 @@ $ccg_tiles   = array(
 						<article class="fusion-academy-offerings__card" aria-labelledby="fusion-academy-tile-<?php echo esc_attr( $tile[0] ); ?>">
 							<span class="fusion-academy-offerings__status-dot" aria-hidden="true"></span>
 							<span class="fusion-academy-offerings__accent-glow fusion-academy-offerings__accent-glow--<?php echo esc_attr( $tile[5] ); ?>" aria-hidden="true"></span>
+							<span class="fusion-academy-offerings__icon-ring" aria-hidden="true">
+								<svg viewBox="0 0 24 24" fill="none" focusable="false">
+									<path d="M5 19v-8M12 19V5M19 19v-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								</svg>
+							</span>
 							<h3 id="fusion-academy-tile-<?php echo esc_attr( $tile[0] ); ?>" class="fusion-academy-offerings__title"><?php echo esc_html( $tile[1] ); ?></h3>
 							<ul class="fusion-academy-offerings__list">
 								<?php foreach ( $tile[2] as $bullet ) : ?>

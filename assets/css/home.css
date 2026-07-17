@@ -569,11 +569,23 @@
 }
 
 .fusion-quick-access__icon-ring {
+  display: flex;
   width: 3rem;
   height: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   border: 2px solid color-mix(in srgb, var(--fusion-blue-bright) 50%, transparent);
+  color: var(--fusion-blue);
   background: color-mix(in srgb, var(--fusion-blue-bright) 12%, transparent);
+  box-shadow: 0 0 1rem color-mix(in srgb, var(--fusion-blue-bright) 14%, transparent);
+}
+
+.fusion-quick-access__icon-ring svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .fusion-quick-access__title {
@@ -673,15 +685,25 @@
 }
 
 .fusion-pathways-help__pill-icon-wrap {
+  display: flex;
   flex-shrink: 0;
   width: 2.875rem;
   height: 2.875rem;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  background: var(--color-accent-primary);
+  background: var(--color-primary);
+  color: #ffe400;
 }
 
 .fusion-pathways-help__pill-icon-wrap--support {
-  background: var(--color-accent-primary);
+  background: var(--color-primary);
+}
+
+.fusion-pathways-help__pill-icon {
+  display: block;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 
 .fusion-pathways-help__pill-label {
@@ -845,21 +867,52 @@
   background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
 }
 
-.fusion-featured-resources__card-title {
+.fusion-featured-resources__icon-ring,
+.fusion-academy-offerings__icon-ring {
+  position: relative;
+  display: flex;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffe400;
+  border-radius: 50%;
+  color: #ffe400;
+  background: color-mix(in srgb, var(--color-primary-darker) 35%, transparent);
+  box-shadow: 0 0 1rem color-mix(in srgb, #ffe400 18%, transparent);
+}
+
+.fusion-featured-resources__icon-ring svg,
+.fusion-academy-offerings__icon-ring svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#main-content .fusion-featured-resources .fusion-featured-resources__card-title {
   margin: 0.75rem 0 0;
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
 }
 
-.fusion-featured-resources__card-link {
+#main-content .fusion-featured-resources a.fusion-featured-resources__card-link,
+#main-content .fusion-featured-resources a.fusion-featured-resources__card-link:visited {
   margin-top: auto;
   padding-top: 0.75rem;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  color: rgba(255, 255, 255, 0.92);
+  color: #ffe400;
   text-decoration: none;
   font-size: 0.875rem;
+}
+
+#main-content .fusion-featured-resources a.fusion-featured-resources__card-link:hover {
+  color: #ffe400;
+  text-decoration: underline;
 }
 
 /* ─── Academy ────────────────────────────────────────────────────────────── */
@@ -1013,10 +1066,10 @@
   background: linear-gradient(90deg, transparent, var(--color-primary-light), transparent);
 }
 
-.fusion-academy-offerings__title {
+#main-content .fusion-academy .fusion-academy-offerings__title {
   margin: 0.75rem 0 0;
   font-weight: 700;
-  color: var(--color-accent-primary);
+  color: #fff;
 }
 
 .fusion-academy-offerings__list {
@@ -1043,12 +1096,18 @@
   background: rgba(255, 255, 255, 0.88);
 }
 
-.fusion-academy-offerings__cta {
+#main-content .fusion-academy a.fusion-academy-offerings__cta,
+#main-content .fusion-academy a.fusion-academy-offerings__cta:visited {
   margin-top: auto;
   padding-top: 1rem;
   font-weight: 700;
-  color: var(--color-accent-primary);
+  color: #ffe400;
   text-decoration: none;
+}
+
+#main-content .fusion-academy a.fusion-academy-offerings__cta:hover {
+  color: #ffe400;
+  text-decoration: underline;
 }
 
 /* ─── Ecosystem ──────────────────────────────────────────────────────────── */
