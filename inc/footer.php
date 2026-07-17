@@ -72,6 +72,8 @@ function ccg_render_site_footer() {
 					<li><a class="fusion-site-footer__link" href="https://www.medicaid.gov/"><?php esc_html_e( 'Medicaid.gov', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://www.healthcare.gov/"><?php esc_html_e( 'Healthcare.gov', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://www.hhs.gov/"><?php esc_html_e( 'HHS.gov', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://data.cms.gov/"><?php esc_html_e( 'Data.CMS.gov', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://github.com/CMSgov/"><?php esc_html_e( 'CMS Projects on GitHub', 'ccg-wp-theme' ); ?></a></li>
 				</ul>
 			</nav>
 
@@ -80,6 +82,10 @@ function ccg_render_site_footer() {
 				<ul class="fusion-site-footer__list">
 					<li><a class="fusion-site-footer__link" href="<?php echo esc_url( home_url( '/resources/page-layouts/' ) ); ?>"><?php esc_html_e( 'Page layouts', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://design.cms.gov/"><?php esc_html_e( 'CMS Design System', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://www.cms.gov/center/freedom-of-information-act-center"><?php esc_html_e( 'Freedom of Information Act', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://oig.hhs.gov/"><?php esc_html_e( 'Inspector General', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://www.cms.gov/about-cms/agency-information/about-policy/no-fear-act"><?php esc_html_e( 'No Fear Act', 'ccg-wp-theme' ); ?></a></li>
+					<li><a class="fusion-site-footer__link" href="https://www.cms.gov/about-cms/agency-information/plain-writing"><?php esc_html_e( 'Plain Writing', 'ccg-wp-theme' ); ?></a></li>
 					<li><a class="fusion-site-footer__link" href="https://www.usa.gov/"><?php esc_html_e( 'USA.gov', 'ccg-wp-theme' ); ?></a></li>
 				</ul>
 			</nav>

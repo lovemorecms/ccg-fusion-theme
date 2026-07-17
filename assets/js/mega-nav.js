@@ -159,6 +159,16 @@
     overlay.addEventListener('click', closeMenu);
   }
 
+  root.querySelectorAll('.fusion-nav-v2__mega a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  root
+    .querySelectorAll('.fusion-site-nav__mobile-drawer a')
+    .forEach(function (link) {
+      link.addEventListener('click', closeMobile);
+    });
+
   categoryTabs.forEach(function (tab) {
     tab.addEventListener('click', function () {
       selectCategory(

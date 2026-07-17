@@ -30,7 +30,7 @@ $cards = array(
 $visible = array_slice( $cards, 0, 3 );
 ?>
 <!-- wp:html -->
-<section id="cards" class="lpl-section lpl-section--cards" aria-labelledby="cards-heading" tabindex="-1">
+<section id="cards" class="lpl-section lpl-section--cards fusion-section-reveal fusion-section-reveal--stagger" aria-labelledby="cards-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="cards-heading" class="lpl-section__title"><?php esc_html_e( 'Card layouts', 'ccg-wp-theme' ); ?></h2>

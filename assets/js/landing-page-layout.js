@@ -1,5 +1,6 @@
 /**
- * Landing template interactions — card layout tabs, compare tabs, FAQ accordion.
+ * Landing template interactions — card layout tabs, compare/heroes/spotlight tabs,
+ * FAQ accordion, and section reveal motion.
  */
 (function () {
 	'use strict';
@@ -30,8 +31,10 @@
 		tabs.forEach(function (tab) {
 			tab.addEventListener('click', function () {
 				tabs.forEach(function (t) {
-					t.classList.toggle('lpl-ms-tabs__tab--active', t === tab);
-					t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+					var on = t === tab;
+					t.classList.toggle('lpl-ms-tabs__tab--active', on);
+					t.setAttribute('aria-selected', on ? 'true' : 'false');
+					t.tabIndex = on ? 0 : -1;
 				});
 				applyLayout(tab.getAttribute('data-layout') || 'three');
 			});
@@ -50,6 +53,7 @@
 					var on = t === tab;
 					t.classList.toggle('lpl-ms-tabs__tab--active', on);
 					t.setAttribute('aria-selected', on ? 'true' : 'false');
+					t.tabIndex = on ? 0 : -1;
 				});
 				panels.forEach(function (panel) {
 					panel.hidden = panel.getAttribute('data-panel') !== id;
@@ -75,7 +79,40 @@
 		});
 	}
 
+	function initSectionReveal() {
+		var sections = document.querySelectorAll('.lpl-page .fusion-section-reveal');
+		if (!sections.length) return;
+
+		var reduceMotion =
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+			document.documentElement.classList.contains('figma-capture');
+
+		if (reduceMotion || !('IntersectionObserver' in window)) {
+			sections.forEach(function (el) {
+				el.setAttribute('data-revealed', 'true');
+			});
+			return;
+		}
+
+		var observer = new IntersectionObserver(
+			function (entries) {
+				entries.forEach(function (entry) {
+					if (!entry.isIntersecting) return;
+					entry.target.setAttribute('data-revealed', 'true');
+					observer.unobserve(entry.target);
+				});
+			},
+			{ threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+		);
+
+		sections.forEach(function (el) {
+			if (el.getAttribute('data-revealed') === 'true') return;
+			observer.observe(el);
+		});
+	}
+
 	document.querySelectorAll('[data-lpl-card-tabs]').forEach(initCardTabs);
 	document.querySelectorAll('[data-lpl-tabs]').forEach(initTabs);
 	document.querySelectorAll('[data-lpl-accordion]').forEach(initAccordion);
+	initSectionReveal();
 })();

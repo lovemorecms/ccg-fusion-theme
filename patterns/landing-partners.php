@@ -7,7 +7,7 @@
 $logos = array( 'CMS Hybrid Cloud', 'AWS', 'Azure', 'Google Cloud', 'Oracle', 'Fusion Toolkit' );
 ?>
 <!-- wp:html -->
-<section id="partners" class="lpl-section lpl-section--partners" aria-labelledby="partners-heading" tabindex="-1">
+<section id="partners" class="lpl-section lpl-section--partners fusion-section-reveal fusion-section-reveal--stagger" aria-labelledby="partners-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="partners-heading" class="lpl-section__title"><?php esc_html_e( 'Partner strip', 'ccg-wp-theme' ); ?></h2>

@@ -21,7 +21,7 @@ $ini = "$env:APPDATA\Local\run\<site-id>\conf\php\php.ini"
 
 ## Landing template sections
 
-Order: breadcrumbs → hero → shared section nav → cards → spotlight → metrics → compare → FAQ → timeline → partners → CTA.
+Order: breadcrumbs → hero → shared section nav → **heroes** → cards → spotlight → metrics → compare → FAQ → timeline → partners → CTA.
 
 Patterns are under **Page layouts**, **Hero**, **Cards**, **Content**, **CTA**, and **Utilities** (landing section nav).
 
@@ -30,5 +30,5 @@ Full insert: **Patterns → Page layouts → Landing page layout (full)**.
 ## Notes
 
 - Landing reuses Fusion Toolkit hero styles (`.ft-hero`) and the shared interior section nav.
-- Card layout tabs, compare tabs, and FAQ accordion are enhanced by `assets/js/landing-page-layout.js`.
-- Soft section motion from the React prototype is not ported yet.
+- Heroes and spotlight use tabbed concept variants (contained/full-width heroes; feature spotlight / copy+media / reversed).
+- Card layout tabs, compare/heroes/spotlight tabs, FAQ accordion, and section reveal motion are handled by `assets/js/landing-page-layout.js`.

@@ -7,6 +7,7 @@
  */
 $items = array(
 	array( 'id' => 'overview', 'label' => __( 'Overview', 'ccg-wp-theme' ) ),
+	array( 'id' => 'heroes', 'label' => __( 'Heroes', 'ccg-wp-theme' ) ),
 	array( 'id' => 'cards', 'label' => __( 'Cards', 'ccg-wp-theme' ) ),
 	array( 'id' => 'spotlight', 'label' => __( 'Spotlight', 'ccg-wp-theme' ) ),
 	array( 'id' => 'metrics', 'label' => __( 'Metrics', 'ccg-wp-theme' ) ),

@@ -12,7 +12,7 @@ $stats = array(
 );
 ?>
 <!-- wp:html -->
-<section id="metrics" class="lpl-section lpl-section--metrics" aria-labelledby="metrics-heading" tabindex="-1">
+<section id="metrics" class="lpl-section lpl-section--metrics fusion-section-reveal fusion-section-reveal--stagger" aria-labelledby="metrics-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="metrics-heading" class="lpl-section__title"><?php esc_html_e( 'Metrics band', 'ccg-wp-theme' ); ?></h2>

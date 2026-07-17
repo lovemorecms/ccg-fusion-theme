@@ -39,6 +39,7 @@ function ccg_landing_template_page_content() {
 		'landing-breadcrumbs.php',
 		'landing-hero.php',
 		'landing-section-nav.php',
+		'landing-heroes.php',
 		'landing-cards.php',
 		'landing-spotlight.php',
 		'landing-metrics.php',

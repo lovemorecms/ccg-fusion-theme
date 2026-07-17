@@ -24,12 +24,12 @@ $tabs = array(
 		'label'   => 'Support',
 		'title'   => 'How teams get help',
 		'body'    => 'Describe support channels, office hours, and escalation paths associated with each tab selection.',
-		'bullets' => array( 'Customer Service Team engagement', 'Knowledge base and runbooks', 'Incident management integration' ),
+		'bullets' => array( 'Customer Service Team engagement', 'Documentation and runbooks', 'Incident management integration' ),
 	),
 );
 ?>
 <!-- wp:html -->
-<section id="compare" class="lpl-section lpl-section--tabs" aria-labelledby="compare-heading" tabindex="-1">
+<section id="compare" class="lpl-section lpl-section--tabs fusion-section-reveal" aria-labelledby="compare-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="compare-heading" class="lpl-section__title"><?php esc_html_e( 'Tabbed comparison', 'ccg-wp-theme' ); ?></h2>

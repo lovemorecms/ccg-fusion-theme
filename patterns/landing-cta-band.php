@@ -8,7 +8,7 @@ $layouts = esc_url( home_url( '/resources/page-layouts/' ) );
 $explore = esc_url( home_url( '/explore/' ) );
 ?>
 <!-- wp:html -->
-<section id="get-started" class="lpl-section lpl-section--cta-band" aria-labelledby="get-started-heading" tabindex="-1">
+<section id="get-started" class="lpl-section lpl-section--cta-band fusion-section-reveal" aria-labelledby="get-started-heading" tabindex="-1">
 	<div class="lpl-container lpl-cta-band">
 		<h2 id="get-started-heading" class="lpl-cta-band__title"><?php esc_html_e( 'Ready to build your landing page?', 'ccg-wp-theme' ); ?></h2>
 		<p class="lpl-cta-band__body"><?php esc_html_e( 'Combine these blocks to create program, platform, or initiative pages that match Explore and Fusion Toolkit patterns.', 'ccg-wp-theme' ); ?></p>

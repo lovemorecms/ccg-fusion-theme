@@ -35,7 +35,7 @@ $quarters = array(
 );
 ?>
 <!-- wp:html -->
-<section id="timeline" class="lpl-section lpl-section--timeline" aria-labelledby="timeline-heading" tabindex="-1">
+<section id="timeline" class="lpl-section lpl-section--timeline fusion-section-reveal" aria-labelledby="timeline-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="timeline-heading" class="lpl-section__title"><?php esc_html_e( 'Release timeline', 'ccg-wp-theme' ); ?></h2>

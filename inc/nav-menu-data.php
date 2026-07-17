@@ -84,7 +84,7 @@ function ccg_nav_sort_panel( $panel, $category_id = '' ) {
 		return $panel;
 	}
 	if ( in_array( $panel['type'], array( 'list', 'cards' ), true ) ) {
-		$preserve = 'fusion-toolkit' === $category_id;
+		$preserve = in_array( $category_id, array( 'fusion-toolkit', 'shared-services' ), true );
 		$panel['links'] = ccg_nav_sort_links( $panel['links'], $preserve );
 		return $panel;
 	}
@@ -111,7 +111,8 @@ function ccg_nav_sort_menu_items( $items ) {
 		'learn'        => array(
 			'knowledge-center'     => 0,
 			'training-enablement'  => 1,
-			'customer-roadmap'     => 2,
+			'resource-center'      => 2,
+			'customer-roadmap'     => 3,
 		),
 		'explore'      => array(
 			'platforms'        => 0,
@@ -293,7 +294,7 @@ function ccg_get_nav_menu_items() {
 				'categories' => array(
 					array(
 						'id'    => 'knowledge-center',
-						'label' => 'Knowledge Center',
+						'label' => 'Documentation',
 						'href'  => ccg_nav_url( '/learn/knowledge-center' ),
 						'panel' => array(
 							'type'    => 'columns',
@@ -389,9 +390,9 @@ function ccg_get_nav_menu_items() {
 						),
 					),
 					array(
-						'id'    => 'customer-roadmap',
-						'label' => 'Customer Roadmap',
-						'href'  => ccg_nav_url( '/learn/initiatives' ),
+						'id'    => 'resource-center',
+						'label' => 'Resource Center',
+						'href'  => ccg_nav_url( '/learn/knowledge-center' ),
 						'panel' => array(
 							'type'    => 'columns',
 							'columns' => array(
@@ -443,6 +444,14 @@ function ccg_get_nav_menu_items() {
 							),
 						),
 					),
+					array(
+						'id'    => 'customer-roadmap',
+						'label' => 'Customer Roadmap',
+						'href'  => ccg_nav_url( '/learn/initiatives' ),
+						'panel' => array(
+							'type' => 'empty',
+						),
+					),
 				),
 			),
 			array(
@@ -458,7 +467,8 @@ function ccg_get_nav_menu_items() {
 							'type'  => 'list',
 							'links' => ccg_nav_list(
 								'Onboarding Stages',
-								'Onboarding Process Key Activities and Supporting Team'
+								'Onboarding Process',
+								'Onboarding FAQs'
 							),
 						),
 					),

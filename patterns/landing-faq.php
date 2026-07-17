@@ -24,7 +24,7 @@ $items = array(
 );
 ?>
 <!-- wp:html -->
-<section id="faq" class="lpl-section lpl-section--faq" aria-labelledby="faq-heading" tabindex="-1">
+<section id="faq" class="lpl-section lpl-section--faq fusion-section-reveal" aria-labelledby="faq-heading" tabindex="-1">
 	<div class="lpl-container">
 		<header class="lpl-section__intro">
 			<h2 id="faq-heading" class="lpl-section__title"><?php esc_html_e( 'FAQ with accordion', 'ccg-wp-theme' ); ?></h2>
