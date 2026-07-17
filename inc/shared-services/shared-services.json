@@ -1,0 +1,445 @@
+{
+  "hero": {
+    "title": "Shared Services",
+    "description": "Discover the building blocks of CMS Cloud Fusion. Browse managed services across networking, compute, storage, security, and more, available across the hybrid cloud ecosystem.",
+    "searchPlaceholder": "Search services, capabilities, or keywords..."
+  },
+  "sectionIds": [
+    "network",
+    "storage",
+    "user-access",
+    "compute",
+    "security-compliance",
+    "platform",
+    "development-support",
+    "operations-maintenance",
+    "finops",
+    "solutions-engineering"
+  ],
+  "totalCount": 38,
+  "categories": [
+    {
+      "id": "network",
+      "label": "Network",
+      "description": "IP management, DNS, connectivity, and secure remote access solutions.",
+      "services": [
+        {
+          "id": "ip-address-management",
+          "title": "IP Address Management",
+          "description": "Managed IP addressing and allocation support.",
+          "tag": "core",
+          "href": "/explore/shared-services/network/ip-address-management"
+        },
+        {
+          "id": "domain-naming-service-dns",
+          "title": "Domain Naming Service (DNS)",
+          "description": "Internal and external DNS management.",
+          "tag": "core"
+        },
+        {
+          "id": "wide-area-network-activation",
+          "title": "Wide Area Network Activation",
+          "description": "WAN connectivity activation and coordination.",
+          "tag": "connectivity"
+        },
+        {
+          "id": "network-peering",
+          "title": "Network Peering",
+          "description": "Private network connectivity between approved environments.",
+          "tag": "advanced"
+        },
+        {
+          "id": "cmsnet",
+          "title": "CMSNet",
+          "description": "CMS network connectivity for authorized systems and users.",
+          "tag": "internal"
+        },
+        {
+          "id": "secure-internet-inbound",
+          "title": "Secure Internet Inbound",
+          "description": "Controlled inbound internet connectivity for hosted services.",
+          "tag": "security"
+        },
+        {
+          "id": "secure-internet-outbound",
+          "title": "Secure Internet Outbound",
+          "description": "Controlled outbound internet access for cloud workloads.",
+          "tag": "security"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "description": "Backup, restore, and enterprise data protection services.",
+      "services": [
+        {
+          "id": "data-backup-and-restore",
+          "title": "Data Backup and Restore",
+          "description": "Managed backup and restore support for enterprise data.",
+          "tag": "core"
+        }
+      ]
+    },
+    {
+      "id": "user-access",
+      "label": "User Access",
+      "description": "Identity, access, and enterprise user connectivity services.",
+      "services": [
+        {
+          "id": "infrastructure-access-management",
+          "title": "Infrastructure Access Management",
+          "description": "Access management support for approved infrastructure environments.",
+          "tag": "security"
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "label": "Compute",
+      "description": "Operating system maintenance, images, and compute support services.",
+      "services": [
+        {
+          "id": "patching",
+          "title": "Patching",
+          "description": "Patch planning and support for approved infrastructure.",
+          "tag": "operations"
+        },
+        {
+          "id": "gold-images",
+          "title": "Gold Images",
+          "description": "Standardized baseline images for cloud workloads.",
+          "tag": "core"
+        }
+      ]
+    },
+    {
+      "id": "security-compliance",
+      "label": "Security & Compliance",
+      "description": "Accreditation, vulnerability management, and security operations.",
+      "services": [
+        {
+          "id": "compliance-scanning",
+          "title": "Compliance Scanning",
+          "description": "Scanning support for compliance posture and control validation.",
+          "tag": "security"
+        },
+        {
+          "id": "product-accreditation",
+          "title": "Product Accreditation",
+          "description": "Accreditation support for products and hosted services.",
+          "tag": "security"
+        },
+        {
+          "id": "security-alerting-and-notification",
+          "title": "Security Alerting and Notification",
+          "description": "Security event alerting and stakeholder notifications.",
+          "tag": "security"
+        },
+        {
+          "id": "vulnerability-scanning",
+          "title": "Vulnerability Scanning",
+          "description": "Routine scanning and remediation support.",
+          "tag": "security"
+        },
+        {
+          "id": "forensic-analysis",
+          "title": "Forensic Analysis",
+          "description": "Investigation and forensic analysis support for security events.",
+          "tag": "advanced"
+        },
+        {
+          "id": "security-incident-management",
+          "title": "Security Incident Management",
+          "description": "Security incident coordination, tracking, and response support.",
+          "tag": "operations"
+        },
+        {
+          "id": "posture-management",
+          "title": "Posture Management",
+          "description": "Security posture visibility and improvement guidance.",
+          "tag": "advanced"
+        },
+        {
+          "id": "security-operations-center",
+          "title": "Security Operations Center",
+          "description": "Security operations monitoring and response coordination.",
+          "tag": "operations"
+        }
+      ]
+    },
+    {
+      "id": "platform",
+      "label": "Platform",
+      "description": "Platform utilities and shared enterprise integration services.",
+      "services": [
+        {
+          "id": "smtp",
+          "title": "SMTP",
+          "description": "Email relay support for approved applications and services.",
+          "tag": "platform"
+        },
+        {
+          "id": "electronic-file-transfer",
+          "title": "Electronic File Transfer",
+          "description": "Secure file transfer support for enterprise integrations.",
+          "tag": "platform"
+        }
+      ]
+    },
+    {
+      "id": "development-support",
+      "label": "Development Support",
+      "description": "Code repositories, testing, and quality assurance services.",
+      "services": [
+        {
+          "id": "code-repository-services",
+          "title": "Code Repository Services",
+          "description": "Managed Git and source control.",
+          "tag": "development"
+        },
+        {
+          "id": "functional-testing",
+          "title": "Functional Testing",
+          "description": "Functional testing support for application teams.",
+          "tag": "development"
+        },
+        {
+          "id": "load-testing",
+          "title": "Load Testing",
+          "description": "Performance and load testing support.",
+          "tag": "development"
+        },
+        {
+          "id": "static-code-analysis",
+          "title": "Static Code Analysis",
+          "description": "Static analysis support for code quality and security.",
+          "tag": "security"
+        }
+      ]
+    },
+    {
+      "id": "operations-maintenance",
+      "label": "Operations & Maintenance",
+      "description": "ITSM, monitoring, incident management, and operational support.",
+      "services": [
+        {
+          "id": "change-management",
+          "title": "Change Management",
+          "description": "Controlled change planning and execution.",
+          "tag": "operations"
+        },
+        {
+          "id": "incident-handling",
+          "title": "Incident Handling",
+          "description": "Incident response, triage, and resolution coordination.",
+          "tag": "operations"
+        },
+        {
+          "id": "enterprise-operations-center",
+          "title": "Enterprise Operations Center",
+          "description": "Centralized enterprise operations monitoring and support.",
+          "tag": "operations"
+        },
+        {
+          "id": "root-cause-analysis",
+          "title": "Root Cause Analysis",
+          "description": "Root cause analysis for recurring or major incidents.",
+          "tag": "advanced"
+        },
+        {
+          "id": "cms-it-service-desk",
+          "title": "CMS IT Service Desk",
+          "description": "Service desk intake and support coordination.",
+          "tag": "core"
+        },
+        {
+          "id": "logging",
+          "title": "Logging",
+          "description": "Centralized logging support for applications and infrastructure.",
+          "tag": "core"
+        },
+        {
+          "id": "infrastructure-monitoring-alerting",
+          "title": "Infrastructure Monitoring & Alerting",
+          "description": "Infrastructure monitoring and alerting support.",
+          "tag": "operations"
+        },
+        {
+          "id": "application-performance-monitoring",
+          "title": "Application Performance Monitoring",
+          "description": "Application performance visibility and monitoring support.",
+          "tag": "operations"
+        }
+      ]
+    },
+    {
+      "id": "finops",
+      "label": "Financial Operations (FinOps)",
+      "description": "Funding education, cost transparency, and optimization consulting.",
+      "services": [
+        {
+          "id": "contract-funding-education-support",
+          "title": "Contract & Funding Education & Support",
+          "description": "Education and support for contracts, funding, and cloud cost planning.",
+          "tag": "finops"
+        },
+        {
+          "id": "cost-utilization-transparency-reporting",
+          "title": "Cost and Utilization Transparency & Reporting",
+          "description": "Reporting support for cloud cost and utilization visibility.",
+          "tag": "finops"
+        },
+        {
+          "id": "cost-optimization-consulting",
+          "title": "Cost Optimization Consulting",
+          "description": "Consulting to identify and act on cost optimization opportunities.",
+          "tag": "finops"
+        }
+      ]
+    },
+    {
+      "id": "solutions-engineering",
+      "label": "Solutions Engineering",
+      "description": "Architecture consulting and onboarding assistance.",
+      "services": [
+        {
+          "id": "architecture-consulting",
+          "title": "Architecture Consulting",
+          "description": "Architecture advisory support for cloud solutions.",
+          "tag": "advanced"
+        },
+        {
+          "id": "onboarding-assistance",
+          "title": "Onboarding Assistance",
+          "description": "Hands-on assistance for teams onboarding to shared services.",
+          "tag": "core"
+        }
+      ]
+    }
+  ],
+  "sectionHero": {
+    "title": "Shared Services",
+    "summary": "Explore our broad portfolio of CMS Hybrid Cloud approved managed technologies, tools, and services below. The list below contains both required services you get automatically to support your cloud hosting experience, and optional services you can use within your application for a more streamlined experience.",
+    "imageSrc": "images/sections/azure-commercial-hero.png",
+    "imageAlt": "Isometric cloud security illustration with glowing cubes and a locked shield"
+  },
+  "articles": [
+    {
+      "slug": "ip-address-management",
+      "categoryId": "network",
+      "categoryLabel": "Network",
+      "status": "Required",
+      "availableIn": [
+        "AWS Commercial",
+        "AWS GovCloud"
+      ],
+      "title": "IP Address Management",
+      "heroSummary": "Managed IP addressing and allocation for CMS Hybrid Cloud. The CMS DIN team provides centralized control so applications receive unique, conflict-free addresses across approved environments.",
+      "introParagraphs": [
+        "The CMS DIN team offers a vital service for managing private IP space within the CMS Cloud environment, ensuring that unique IPv4 addresses are allocated and tracked efficiently. By utilizing BTDiamond as the centralized database for IP address management, this solution simplifies the assignment and tracking of IPv4 addresses, ensuring consistency and preventing conflicts across the network."
+      ],
+      "heroImageSrc": "images/sections/azure-commercial-hero.png",
+      "heroImageAlt": "Isometric cloud security illustration with glowing cubes and a locked shield",
+      "metadata": {
+        "updated": "January 13, 2026",
+        "owner": "CMS DIN Team",
+        "cloud": "Network",
+        "readingTime": "4 min"
+      },
+      "sectionIds": [
+        "overview",
+        "benefits",
+        "associated-cost",
+        "availability",
+        "getting-started"
+      ],
+      "lastUpdated": "January 13, 2026",
+      "sections": [
+        {
+          "id": "benefits",
+          "navLabel": "Benefits",
+          "heading": "Benefits",
+          "type": "leads",
+          "items": [
+            {
+              "label": "Centralized Management",
+              "body": "BTDiamond acts as the system of record for IP inventory, so allocations stay consistent across CMS Hybrid Cloud environments."
+            },
+            {
+              "label": "Avoids Conflicts",
+              "body": "Coordinated assignment prevents overlapping ranges that can break routing, peering, or hybrid connectivity."
+            },
+            {
+              "label": "Operational Efficiency",
+              "body": "Standard request and allocation workflows reduce ad-hoc spreadsheet tracking and accelerate onboarding."
+            },
+            {
+              "label": "Scalability",
+              "body": "IP plans can grow with your application footprint while remaining aligned to CMS network architecture."
+            }
+          ]
+        },
+        {
+          "id": "associated-cost",
+          "navLabel": "Associated Cost",
+          "heading": "Associated Cost",
+          "type": "prose",
+          "paragraphs": [
+            "There is no additional charge for IP Address Management. The service is included as part of CMS Hybrid Cloud shared services."
+          ]
+        },
+        {
+          "id": "availability",
+          "navLabel": "Availability",
+          "heading": "Availability",
+          "type": "table",
+          "table": {
+            "headers": [
+              "Detail",
+              "Value"
+            ],
+            "rowHeaderColumn": true,
+            "rows": [
+              [
+                "Category",
+                "Network"
+              ],
+              [
+                "Status",
+                "Required"
+              ],
+              [
+                "Available in",
+                "AWS Commercial, AWS GovCloud"
+              ]
+            ]
+          }
+        },
+        {
+          "id": "getting-started",
+          "navLabel": "Getting Started",
+          "heading": "Getting Started",
+          "type": "prose",
+          "paragraphs": [
+            "If you are onboarding a new application or expanding an existing environment, request IP Address Management as part of your CMS Hybrid Cloud hosting plan. Your Customer Support Team or Hosting Coordinator can help confirm requirements and submit the allocation request to CMS DIN."
+          ],
+          "links": [
+            {
+              "label": "Back to Shared Services",
+              "href": "/explore/shared-services"
+            },
+            {
+              "label": "Network services",
+              "href": "/explore/shared-services#network"
+            },
+            {
+              "label": "Get started with CMS Hybrid Cloud",
+              "href": "/explore#getting-started"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

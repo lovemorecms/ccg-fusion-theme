@@ -5,8 +5,8 @@
 
 :root {
   --fusion-site-max-width: 100rem;
-  --fusion-site-padding-x: 1.25rem;
-  --fusion-site-padding-x-md: 2rem;
+  --fusion-site-padding-x: 1.5rem;
+  --fusion-site-padding-x-md: 3rem;
   /* Sticky stack: CCG nav only + Explore breadcrumb (gov banner scrolls away). */
   --ccg-site-nav-height: var(--fusion-nav-sticky-height, 5rem);
   --ccg-breadcrumb-bar-height: 2.75rem;
@@ -83,6 +83,44 @@ header.ccg-site-header-part:has(.fusion-nav-v2--mega-open) .fusion-site-header {
 .ccg-skip-link:focus {
   left: 1rem;
   top: 1rem;
+}
+
+/*
+ * CMS DS paints focus with --color-focus-dark (#c97532). On pill navs and
+ * clipped menus that ring reads as orange side brackets. Drop mouse-focus
+ * rings site-wide; keep a primary keyboard ring via :focus-visible.
+ */
+a:focus:not(:focus-visible),
+a:focus:visited:not(:focus-visible),
+a:focus:not(.ds-c-button, .ds-c-tooltip__trigger-link):not(:focus-visible) {
+  background-color: transparent;
+  box-shadow: none;
+  color: inherit;
+  outline: none;
+  text-decoration: inherit;
+}
+
+button:focus:not(:focus-visible),
+button:focus:not(:focus-visible):not(.ds-c-button),
+.fusion-site-nav button.fusion-mega-trigger:focus:not(:focus-visible),
+.fusion-site-nav button.fusion-site-nav__search-btn:focus:not(:focus-visible),
+.fusion-site-nav button.fusion-site-nav__menu-btn:focus:not(:focus-visible),
+.interior-section-nav a.interior-section-nav__link:focus:not(:focus-visible) {
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+a:focus-visible:not(.ds-c-button) {
+  outline: 2px solid var(--color-primary, #005ea2);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+button:focus-visible:not(.ds-c-button) {
+  outline: 2px solid var(--color-primary, #005ea2);
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 .fusion-usa-banner.ds-c-usa-banner .ds-c-usa-banner__header,
@@ -199,8 +237,18 @@ html.ccg-mega-nav-open {
 .ccg-main:has(.fusion-hero),
 .ccg-main:has(.ft-hero),
 .ccg-main:has(.init-hero),
+.ccg-main:has(.pa-page),
+.ccg-main:has(.ss-page),
+.ccg-main.pa-page-shell,
+.ccg-main.ss-page-shell,
 .ccg-main.ccg-landing-page,
-.ccg-main.lpl-page {
+.ccg-main.lpl-page,
+.ccg-main.ccg-about-sections,
+.ccg-main.about-hybrid-cloud-page,
+.ccg-main.cst-page,
+.ccg-main:has(.ccg-about-sections),
+.ccg-main:has(.about-hybrid-cloud-page),
+.ccg-main:has(.tpl-2col-hero-band) {
   max-width: none;
   padding: 0;
 }

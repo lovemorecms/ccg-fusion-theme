@@ -29,14 +29,25 @@ function ccg_about_render_pattern_file( $pattern_file ) {
  */
 function ccg_about_program_overview_page_content() {
 	$sections = array(
-		'hero-interior-breadcrumbs.php',
 		'cards-image-three-up.php',
 		'feature-grid-icons-four.php',
 		'stats-metrics-four-up.php',
 		'checklist-icon-two-column.php',
 		'cta-gradient-band.php',
 	);
-	$parts    = array();
+	$hero_image = ccg_about_benefits_image_url( 'customer-support-hero.png' );
+	$chrome     = ccg_about_hybrid_cloud_chrome_html(
+		array(
+			'current_slug'     => 'program-overview',
+			'current_label'    => __( 'Program Overview', 'ccg-wp-theme' ),
+			'background_image' => $hero_image,
+			'show_actions'     => true,
+		)
+	);
+	$parts      = array(
+		'<!-- wp:html -->' . "\n" . $chrome . "\n" . '<!-- /wp:html -->',
+	);
+
 	foreach ( $sections as $file ) {
 		$markup = ccg_about_render_pattern_file( $file );
 		if ( $markup ) {
@@ -44,8 +55,8 @@ function ccg_about_program_overview_page_content() {
 		}
 	}
 	$inner = implode( "\n\n", $parts );
-	return '<!-- wp:group {"align":"full","className":"ccg-about-sections program-overview","layout":{"type":"default"}} -->' . "\n"
-		. '<div class="wp-block-group alignfull ccg-about-sections program-overview">' . "\n"
+	return '<!-- wp:group {"align":"full","className":"ccg-about-sections program-overview about-hybrid-cloud-page cst-page","layout":{"type":"default"}} -->' . "\n"
+		. '<div class="wp-block-group alignfull ccg-about-sections program-overview about-hybrid-cloud-page cst-page">' . "\n"
 		. $inner . "\n"
 		. '</div>' . "\n"
 		. '<!-- /wp:group -->';

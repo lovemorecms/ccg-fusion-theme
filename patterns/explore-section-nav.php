@@ -40,6 +40,7 @@ ccg_render_interior_section_nav(
 		'aria_label' => __( 'Explore page sections', 'ccg-wp-theme' ),
 		'cta_href'   => '#learn-connect',
 		'cta_label'  => __( 'Contact Team', 'ccg-wp-theme' ),
+		'cta_class'  => 'ds-c-button ds-c-button--solid',
 	)
 );
 ?>

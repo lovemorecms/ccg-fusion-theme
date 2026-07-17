@@ -181,6 +181,31 @@ function ccg_nav_platform_links() {
 }
 
 /**
+ * Shared Services category links for Explore mega menu.
+ *
+ * @return array<int, array{label:string,href:string}>
+ */
+function ccg_nav_shared_services_links() {
+	$categories = array(
+		array( 'Network', 'network' ),
+		array( 'Storage', 'storage' ),
+		array( 'User Access', 'user-access' ),
+		array( 'Compute', 'compute' ),
+		array( 'Security & Compliance', 'security-compliance' ),
+		array( 'Platform', 'platform' ),
+		array( 'Development Support', 'development-support' ),
+		array( 'Operations & Maintenance', 'operations-maintenance' ),
+		array( 'Financial Operations (FinOps)', 'finops' ),
+		array( 'Solutions Engineering', 'solutions-engineering' ),
+	);
+	$links = array();
+	foreach ( $categories as $cat ) {
+		$links[] = ccg_nav_link( $cat[0], '/explore/shared-services/#' . $cat[1] );
+	}
+	return $links;
+}
+
+/**
  * Fusion Toolkit links (fixed order).
  *
  * @return array<int, array{label:string,href:string}>
@@ -219,9 +244,9 @@ function ccg_get_nav_menu_items() {
 							'type'  => 'list',
 							'links' => array(
 								ccg_nav_link( 'Program Overview', '/about/program-overview' ),
-								ccg_nav_link( 'Benefits', '/about/program-overview' ),
-								ccg_nav_link( 'Success Stories', '/about/program-overview' ),
-								ccg_nav_link( 'Contact Us', '/about/program-overview' ),
+								ccg_nav_link( 'Benefits', '/about/benefits' ),
+								ccg_nav_link( 'Success Stories', '/about/success-stories' ),
+								ccg_nav_link( 'Contact Us', '/about/contact-us' ),
 							),
 						),
 					),
@@ -253,21 +278,10 @@ function ccg_get_nav_menu_items() {
 					array(
 						'id'    => 'shared-services',
 						'label' => 'Shared Services',
-						'href'  => ccg_nav_url( '/explore' ),
+						'href'  => ccg_nav_url( '/explore/shared-services' ),
 						'panel' => array(
 							'type'  => 'list',
-							'links' => ccg_nav_list(
-								'Compute',
-								'Development Support',
-								'Financial Operations (FinOps)',
-								'Network',
-								'Operations & Maintenance',
-								'Platform',
-								'Security & Compliance',
-								'Storage',
-								'Solutions Engineering',
-								'User Access'
-							),
+							'links' => ccg_nav_shared_services_links(),
 						),
 					),
 				),

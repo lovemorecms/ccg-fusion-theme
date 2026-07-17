@@ -70,10 +70,10 @@ function ccg_render_site_search_panel() {
 				data-site-search-input
 			/>
 			<div class="fusion-site-search__actions">
-				<button type="submit" class="ds-c-button ds-c-button--solid ds-c-button--small fusion-site-search__submit">
+				<button type="submit" class="ds-c-button ds-c-button--solid fusion-site-search__submit">
 					<?php esc_html_e( 'Search', 'ccg-wp-theme' ); ?>
 				</button>
-				<button type="button" class="ds-c-button ds-c-button--ghost ds-c-button--small" data-site-search-close>
+				<button type="button" class="ds-c-button ds-c-button--ghost fusion-site-search__close" data-site-search-close>
 					<?php esc_html_e( 'Close', 'ccg-wp-theme' ); ?>
 				</button>
 			</div>

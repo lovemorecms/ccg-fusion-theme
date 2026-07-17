@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CCG_WP_THEME_VERSION', '0.9.10' );
+define( 'CCG_WP_THEME_VERSION', '0.10.21' );
 define( 'CCG_CMSDS_VERSION', '12.4.5' );
 
 /**
@@ -41,6 +41,9 @@ function ccg_wp_theme_register_editor_styles() {
 			'assets/css/interior-section-nav.css',
 			'assets/css/page-layouts.css',
 			'assets/css/landing-page-layout.css',
+			'assets/css/platform-article.css',
+			'assets/css/shared-services.css',
+			'assets/css/about-hybrid-cloud.css',
 			'assets/css/buttons.css',
 			'assets/css/editor.css',
 		)
@@ -127,9 +130,27 @@ function ccg_wp_theme_enqueue_assets() {
 		CCG_WP_THEME_VERSION
 	);
 	wp_enqueue_style(
+		'ccg-wp-theme-platform-article',
+		get_template_directory_uri() . '/assets/css/platform-article.css',
+		array( 'ccg-wp-theme', 'ccg-wp-theme-explore', 'ccg-wp-theme-interior-section-nav' ),
+		CCG_WP_THEME_VERSION
+	);
+	wp_enqueue_style(
+		'ccg-wp-theme-shared-services',
+		get_template_directory_uri() . '/assets/css/shared-services.css',
+		array( 'ccg-wp-theme', 'ccg-wp-theme-explore', 'ccg-wp-theme-interior-section-nav', 'ccg-wp-theme-platform-article' ),
+		CCG_WP_THEME_VERSION
+	);
+	wp_enqueue_style(
+		'ccg-wp-theme-about-hybrid-cloud',
+		get_template_directory_uri() . '/assets/css/about-hybrid-cloud.css',
+		array( 'ccg-wp-theme', 'ccg-wp-theme-program-overview', 'ccg-wp-theme-interior-section-nav' ),
+		CCG_WP_THEME_VERSION
+	);
+	wp_enqueue_style(
 		'ccg-wp-theme-buttons',
 		get_template_directory_uri() . '/assets/css/buttons.css',
-		array( 'ccg-wp-theme-landing-page-layout' ),
+		array( 'ccg-wp-theme-landing-page-layout', 'ccg-wp-theme-platform-article', 'ccg-wp-theme-shared-services', 'ccg-wp-theme-about-hybrid-cloud' ),
 		CCG_WP_THEME_VERSION
 	);
 
@@ -157,6 +178,13 @@ function ccg_wp_theme_enqueue_assets() {
 	wp_enqueue_script(
 		'ccg-landing-page-layout',
 		get_template_directory_uri() . '/assets/js/landing-page-layout.js',
+		array(),
+		CCG_WP_THEME_VERSION,
+		true
+	);
+	wp_enqueue_script(
+		'ccg-shared-services',
+		get_template_directory_uri() . '/assets/js/shared-services.js',
 		array(),
 		CCG_WP_THEME_VERSION,
 		true
@@ -222,8 +250,12 @@ function ccg_wp_theme_asset_url( $relative ) {
 }
 
 require_once get_template_directory() . '/inc/about/helpers.php';
+require_once get_template_directory() . '/inc/about/about-hybrid-cloud.php';
 require_once get_template_directory() . '/inc/interior-section-nav.php';
 require_once get_template_directory() . '/inc/explore/helpers.php';
+require_once get_template_directory() . '/inc/platform-articles/helpers.php';
+require_once get_template_directory() . '/inc/shared-services/icons.php';
+require_once get_template_directory() . '/inc/shared-services/helpers.php';
 require_once get_template_directory() . '/inc/fusion-toolkit/helpers.php';
 require_once get_template_directory() . '/inc/page-layouts/helpers.php';
 require_once get_template_directory() . '/inc/mega-nav.php';

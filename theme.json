@@ -27,6 +27,11 @@
     { "name": "page-program-overview", "title": "Program Overview page", "postTypes": ["page"] },
     { "name": "page-fusion-toolkit", "title": "Fusion Toolkit page", "postTypes": ["page"] },
     { "name": "page-page-layouts", "title": "Page layouts library", "postTypes": ["page"] },
-    { "name": "page-landing-layout", "title": "Landing page layout", "postTypes": ["page"] }
+    { "name": "page-landing-layout", "title": "Landing page layout", "postTypes": ["page"] },
+    { "name": "page-platform-article", "title": "Platform article page", "postTypes": ["page"] },
+    { "name": "page-shared-services", "title": "Shared Services catalog", "postTypes": ["page"] },
+    { "name": "page-shared-service-article", "title": "Shared Service article page", "postTypes": ["page"] },
+    { "name": "page-about-benefits", "title": "About Benefits page", "postTypes": ["page"] },
+    { "name": "page-about-section", "title": "About Hybrid Cloud section page", "postTypes": ["page"] }
   ]
 }

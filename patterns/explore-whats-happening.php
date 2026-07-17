@@ -22,7 +22,7 @@
 			<p class="init-happening__body">Learn about the capacity planning process and how to submit your application&rsquo;s needs.</p>
 			<a class="init-happening__cta ds-c-button ds-c-button--ghost" href="#">Read more →</a>
 		</div>
-		<div class="init-happening__card" style="border-left-color:var(--color-accent-primary,#ffe400)">
+		<div class="init-happening__card" style="border-left-color:var(--color-primary,#005ea2)">
 			<span class="init-happening__date">ONGOING</span>
 			<h3 class="init-happening__title">Office Hours</h3>
 			<p class="init-happening__body">Weekly office hours every Thursday from 2–3 PM ET to get your questions answered.</p>

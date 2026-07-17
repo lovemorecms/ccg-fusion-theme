@@ -9,6 +9,12 @@
 <section class="kc-section" id="learn-connect">
 	<div class="init-bottom-grid">
 		<div class="init-learn">
+			<div class="init-learn__icon" aria-hidden="true">
+				<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+					<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
 			<h2 class="init-learn__heading">Learn &amp; Connect</h2>
 			<p class="init-learn__description">Access training, tools, and collaboration opportunities to support your infrastructure journey.</p>
 			<div class="init-learn__links">
@@ -43,7 +49,10 @@
 					</div>
 				</div>
 			</div>
-			<a class="ds-c-button ds-c-button--solid ccg-btn-accent init-btn--full" href="#">Contact Us</a>
+			<a class="ds-c-button ds-c-button--solid init-btn--full" href="#">
+				Contact Us
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</a>
 		</div>
 	</div>
 </section>

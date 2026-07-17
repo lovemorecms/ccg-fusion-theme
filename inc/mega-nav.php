@@ -162,7 +162,7 @@ function ccg_mega_nav_render_mobile_panel( $panel, $category ) {
  */
 function ccg_render_mega_nav_header() {
 	$items    = ccg_get_nav_menu_items();
-	$logo_url = ccg_wp_theme_asset_url( 'assets/images/fusion-orbit-logo.png' );
+	$logo_url = ccg_wp_theme_asset_url( 'assets/images/cloud-fusion-logo.png' );
 	$home     = home_url( '/' );
 	?>
 	<a class="ccg-skip-link" href="#main-content"><?php esc_html_e( 'Skip to main content', 'ccg-wp-theme' ); ?></a>
@@ -177,9 +177,9 @@ function ccg_render_mega_nav_header() {
 				<a href="<?php echo esc_url( $home ); ?>" class="fusion-site-nav__logo">
 					<img
 						src="<?php echo esc_url( $logo_url ); ?>"
-						alt="<?php esc_attr_e( 'FUSION Sphere', 'ccg-wp-theme' ); ?>"
-						width="213"
-						height="49"
+						alt="<?php esc_attr_e( 'Cloud Fusion', 'ccg-wp-theme' ); ?>"
+						width="282"
+						height="40"
 					/>
 				</a>
 

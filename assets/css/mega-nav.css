@@ -62,13 +62,14 @@
 
 .fusion-site-nav a.fusion-site-nav__logo img {
   display: block;
-  height: 2.5rem;
+  height: 2rem;
   width: auto;
+  max-width: none;
 }
 
 @media (min-width: 768px) {
   .fusion-site-nav a.fusion-site-nav__logo img {
-    height: 49px;
+    height: 2.5rem;
   }
 }
 
@@ -133,6 +134,15 @@
   box-shadow:
     var(--fusion-mega-glow-cyan),
     inset 0 -2px 0 var(--fusion-dandelion);
+}
+
+/* Open tab: keep keyboard focus without a hard “boxed” outline */
+.fusion-nav-v2.fusion-nav-v2--mega-open button.fusion-mega-trigger--active:focus,
+.fusion-nav-v2.fusion-nav-v2--mega-open button.fusion-mega-trigger--active:focus-visible {
+  outline: none;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--color-white) 90%, transparent),
+    0 0 24px var(--fusion-mega-cyan-soft);
 }
 
 .fusion-mega-trigger__underline {
@@ -212,36 +222,25 @@
   pointer-events: none;
 }
 
+/*
+ * Open trigger styles. Both .fusion-nav-v2--mega-open and .fusion-site-nav live on the
+ * same root node, so a descendant selector (.mega-open .site-nav …) never matches.
+ */
+.fusion-nav-v2.fusion-nav-v2--mega-open button.fusion-mega-trigger--active,
 .fusion-nav-v2--mega-open .fusion-site-nav button.fusion-mega-trigger--active {
   z-index: 63;
-  margin-bottom: -3px;
-  padding-bottom: calc(0.625rem + 3px);
+  align-self: stretch;
+  margin-bottom: 0;
+  padding-bottom: 0.75rem;
   color: var(--color-primary-darkest);
   background: linear-gradient(
     180deg,
     color-mix(in srgb, var(--color-white) 96%, var(--color-primary-lightest)) 0%,
     color-mix(in srgb, var(--color-primary-lightest) 48%, var(--color-white)) 72%,
-    color-mix(in srgb, var(--color-white) 82%, var(--color-primary-lightest)) 100%
+    color-mix(in srgb, var(--color-white) 88%, var(--color-primary-lightest)) 100%
   );
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, var(--color-white) 90%, transparent),
-    0 0 24px var(--fusion-mega-cyan-soft),
-    0 8px 20px color-mix(in srgb, var(--color-primary-darker) 8%, transparent);
-}
-
-.fusion-site-header:has(.fusion-nav-v2--mega-open),
-header.ccg-site-header-part:has(.fusion-nav-v2--mega-open) .fusion-site-header {
-  border-bottom-color: transparent;
-  background:
-    radial-gradient(ellipse 55% 120% at 50% 100%, color-mix(in srgb, var(--fusion-mega-cyan) 10%, transparent), transparent 62%),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-white) 98%, var(--color-primary-lightest)) 0%,
-      color-mix(in srgb, var(--color-primary-lightest) 32%, var(--color-white)) 100%
-    );
-  box-shadow:
-    0 12px 40px color-mix(in srgb, var(--color-primary-darker) 9%, transparent),
-    inset 0 -1px 0 color-mix(in srgb, var(--color-primary-light) 10%, transparent);
+  /* Soft tab — no side/bottom edge so it merges into the mega panel */
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-white) 90%, transparent);
 }
 
 header.ccg-site-header-part .fusion-site-header {
@@ -251,9 +250,29 @@ header.ccg-site-header-part .fusion-site-header {
   background: transparent;
 }
 
+/* Keep the navbar on its normal white surface when a mega menu opens. */
+.fusion-site-header:has(.fusion-nav-v2--mega-open),
+header.ccg-site-header-part:has(.fusion-nav-v2--mega-open) .fusion-site-header {
+  border-bottom: none;
+  background: var(--color-white, #ffffff);
+  box-shadow: 0 8px 20px color-mix(in srgb, #000000 6%, transparent);
+}
+
 .fusion-nav-v2--mega-open .fusion-nav-v2__bar {
   position: relative;
   z-index: 64;
+  /* Drop bottom padding so the active tab sits on the mega seam */
+  padding-bottom: 0;
+}
+
+.fusion-nav-v2--mega-open .ccg-mega-nav__desktop {
+  align-self: stretch;
+  align-items: center;
+}
+
+.fusion-nav-v2--mega-open .ccg-mega-nav__actions,
+.fusion-nav-v2--mega-open .fusion-site-nav__logo {
+  align-self: center;
 }
 
 .fusion-nav-v2--mega-open .fusion-nav-v2__bar::after {
@@ -392,11 +411,12 @@ header.ccg-site-header-part .fusion-site-header {
 .fusion-site-search__input:focus {
   outline: none;
   border-color: var(--fusion-blue);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--fusion-blue) 25%, transparent);
+  box-shadow: 0 0 0 2px var(--fusion-blue);
 }
 
 .fusion-site-search__actions {
   display: flex;
+  align-items: center;
   flex-shrink: 0;
   gap: 0.5rem;
 }
@@ -451,11 +471,12 @@ header.ccg-site-header-part .fusion-site-header {
 }
 
 .fusion-nav-v2__overlay {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  top: var(--fusion-nav-sticky-height, 5rem);
+  top: 100%;
+  bottom: auto;
+  height: 100vh;
   z-index: 59;
   border: 0;
   margin: 0;
@@ -483,8 +504,8 @@ header.ccg-site-header-part .fusion-site-header {
 }
 
 @keyframes fusion-nav-v2-swap {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fusion-nav-v2-shimmer {
@@ -523,16 +544,16 @@ header.ccg-site-header-part .fusion-site-header {
 
 .fusion-nav-v2__mega-bridge {
   position: absolute;
-  top: -14px;
+  top: -18px;
   left: 0;
   right: 0;
-  height: 14px;
+  height: 18px;
   pointer-events: none;
   z-index: 3;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--color-primary-lightest) 42%, transparent) 0%,
-    color-mix(in srgb, var(--color-white) 28%, transparent) 55%,
+    color-mix(in srgb, var(--color-primary-lightest) 55%, transparent) 0%,
+    color-mix(in srgb, var(--color-white) 40%, transparent) 45%,
     transparent 100%
   );
   filter: blur(0.5px);
@@ -744,18 +765,18 @@ header.ccg-site-header-part .fusion-site-header {
   padding: 0.6875rem 0.875rem 0.6875rem 1rem;
   text-align: left;
   font-size: 0.9375rem;
+  /* Keep weight stable — 600→700 reflow makes the rail jump */
   font-weight: 600;
   line-height: 1.35;
   color: var(--color-primary-darker);
   cursor: pointer;
-  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
 .fusion-nav-v2__category:hover,
 .fusion-nav-v2__category:focus-visible {
   background: linear-gradient(90deg, color-mix(in srgb, var(--color-primary-lightest) 42%, transparent), color-mix(in srgb, var(--fusion-mega-cyan) 6%, transparent));
   outline: none;
-  transform: translateX(2px);
   box-shadow: 0 0 16px color-mix(in srgb, var(--fusion-mega-cyan) 10%, transparent);
 }
 
@@ -768,7 +789,7 @@ header.ccg-site-header-part .fusion-site-header {
   --fusion-rail-glow: color-mix(in srgb, var(--fusion-mega-cyan) 35%, transparent);
   background: linear-gradient(90deg, color-mix(in srgb, var(--color-white) 72%, transparent), color-mix(in srgb, var(--color-primary-lightest) 28%, transparent));
   color: var(--color-primary-darkest);
-  font-weight: 700;
+  font-weight: 600;
   box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-white) 85%, transparent), 0 0 20px var(--fusion-rail-glow), 0 4px 14px color-mix(in srgb, var(--color-primary-darker) 6%, transparent);
 }
 
@@ -801,7 +822,6 @@ header.ccg-site-header-part .fusion-site-header {
 .fusion-nav-v2__category--active:hover,
 .fusion-nav-v2__category--active:focus-visible {
   background: color-mix(in srgb, var(--color-white) 92%, transparent);
-  transform: none;
 }
 
 .fusion-nav-v2__right {
@@ -809,17 +829,34 @@ header.ccg-site-header-part .fusion-site-header {
   z-index: 1;
   flex: 1;
   min-width: 0;
+  display: grid;
+  align-content: start;
   padding: 1.375rem 1.5rem 1.375rem 1.875rem;
   overflow-y: auto;
   background: linear-gradient(118deg, color-mix(in srgb, var(--color-primary-lightest) 6%, transparent) 0%, transparent 32%, color-mix(in srgb, var(--fusion-mega-cyan) 4%, transparent) 100%);
 }
 
+/* Stack panes so the panel keeps the tallest category height (no resize jump). */
+.ccg-mega-nav__panel-pane {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+
 .ccg-mega-nav__panel-pane[hidden] {
-  display: none !important;
+  display: block !important;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ccg-mega-nav__panel-pane:not([hidden]) {
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 .fusion-nav-v2__panel-content {
-  animation: fusion-nav-v2-swap 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fusion-nav-v2-swap 0.16s ease forwards;
 }
 
 .fusion-nav-v2__panel-content--columns {
